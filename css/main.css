@@ -7,14 +7,8 @@ body {
 }
 
 #index-main {
-    max-width: 800px;
+    max-width: 900px;
     margin:0 auto;
-}
-
-header, nav, main, footer {
-    margin: 1.25rem auto;
-    max-width: 760px;
-
 }
 
 header, footer {
@@ -23,13 +17,13 @@ header, footer {
     padding: 8px;
     background-color: navy;
     color: #ffffff;
-    text-align: center;
 }
 
 header h1 {
     font-size: 32px;
-    padding-left:95px;
+    padding-left:115px;
 }
+
 main {
     padding: 0 15px;
 }
