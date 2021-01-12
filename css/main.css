@@ -21,7 +21,8 @@ header, footer {
 
 header h1 {
     font-size: 32px;
-    padding-left:115px;
+    font-style: italic;
+    padding-left:110px;
 }
 
 main {
