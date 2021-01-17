@@ -12,7 +12,7 @@ h2 {
 }
 
 #index-main {
-    max-width: 900px;
+    max-width: 1100px;
     margin:0 auto;
 }
 
@@ -31,7 +31,7 @@ section {
     flex-basis: 220px;
     margin: 9px;
     background-color: white;
-    max-width: 290px;
+    max-width: 390px;
     border-radius: 5px;
 }
 

@@ -1,0 +1,14 @@
+@media only screen and (min-width: 52.5em) {
+
+    header h1 {
+        font-size: 42px;
+    }
+
+    h2 {
+        font-size:1.5rem;
+    }
+
+    header, footer {
+        border-radius:10px;
+    }
+}
