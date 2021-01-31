@@ -77,9 +77,6 @@
         float: right;
     }
 
-    footer { 
-
-    }
     #footer-content {
         display: grid;
         grid-template-columns: auto auto;
