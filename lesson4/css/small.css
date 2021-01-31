@@ -1,0 +1,122 @@
+body {
+    font-family: 'Roboto', sans-serif;
+
+    margin:0;
+}
+
+main {
+    max-width: 74.5em;
+    margin: 0 auto;
+}
+
+header {
+    background: skyblue;
+    padding: 0;
+}
+
+#header-content {
+    max-width: 77.4em;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr auto;
+    padding: 10px 0px 0px 0px;
+    
+}
+
+#site-title {
+    display:grid;
+    grid-template-columns: min-content auto;
+    font-size: 0.8em;
+} 
+
+#site-title img {
+    background-color: #FF684D;
+    margin: 0 10% 1em 1em;
+    width: 70px;
+    height: 70px;
+}
+
+#site-title h2 {
+    margin: 0;
+    margin-top: 0.5em;
+    font-weight: 600;
+}
+
+#site-title p {
+    margin: 0;
+    margin-left: 10px;
+}
+
+main h2 {
+    margin:0.5em 0.3em;
+    font-weight: 600;
+}
+
+#heroimg {
+    width: 100%;
+    height: 150px;
+    background-color:#FF684D;
+}
+
+#weather-summary {
+    background-color: #DDDDDD;
+    padding: 0.2em 1.3em;
+    margin:0;
+}
+
+#five-day-forecast {
+    background-color: #AAAAAA;
+    margin:0;
+    padding: 5%;
+    outline: 1px solid #525252 ;
+}
+
+#five-day-forecast img {
+    display: none;
+}
+
+#five-day-forecast h2 {
+    text-align: center;
+    font-weight: 600;
+}
+
+#article {
+    padding: 0.2em 1.3em;
+    outline: 1px solid #525252 ;
+    background-color: #DDDDDD;
+}
+
+article h2 {
+    font-weight: 600;
+}
+#article img {
+    order: 2;
+    width: 100%;
+    height: 130px;
+    background-color: #FF684D;
+}
+
+footer {
+    outline: 1px solid #525252 ;
+    margin: 0;
+    padding: 0.1em 2em;
+    background-color: #AAAAAA;
+}
+
+footer img {
+    display: none;
+}
+
+footer #map {
+    display: block;
+    height: 200px;
+    width: 450px;
+    margin:0;
+    background-color: #FF684D;
+}
+
+#footer-bar {
+    text-align: center;
+    font-style: italic;
+}
