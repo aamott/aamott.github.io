@@ -1,0 +1,140 @@
+@media only screen and (min-width: 34.5em) {
+    #site-title {
+        font-size: 0.9em;
+    }
+
+    #alert {
+        font-size: 1em;
+    }
+
+    #site-title img {
+        width: 80px;
+        height: 80px;
+    }
+
+    main h2 {
+        font-size: 2em;
+    }
+
+
+    
+    main .herodiv {
+        position: relative;
+    }
+
+    #heroimg {
+        height: 280px;
+    }
+
+    #weather-summary {
+        position: absolute;
+        width: 280px;
+        top: 30px; 
+        left: 30px;
+    }
+
+    #weather-summary h2 {
+        font-size: 1.7em;
+    }
+
+    #weather-summary p {
+        font-size: 1.2em;
+    }
+
+
+
+
+    #five-day-forecast {
+        background-color: transparent;
+        padding: 0;
+        outline: none;
+    }
+
+    #five-day-forecast h2 {
+        background-color: transparent;
+        margin: 0.5em;
+        padding: 0;
+        text-align: left;
+    }
+
+    #five-day-forecast div {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        background-color: #DDDDDD;
+        padding: 1em;
+        margin-bottom: 2em;
+        outline: 1px solid black;
+    }
+
+    #five-day-forecast img {display: flex;
+        margin: auto;
+        background: rgb(81,226,217);
+background: radial-gradient(circle, rgba(255,255,255,0.37) 52%, rgba(221,221,221,1) 100%, rgba(221,221,221,1) 100%);
+        display: block;
+    }
+
+
+
+
+
+    #article {
+        margin-bottom: 20px;
+        display: flow-root;
+    }
+
+    #article h2 {
+        order: 0;
+    }
+
+    #article p {
+        font-size: 1.2em;
+    }
+    
+    #article img {
+        width: 200px;
+        float: right;
+    }
+
+
+
+
+
+    #footer-content {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto;
+        max-width: 74.5em;
+        margin: 0 auto;
+    }
+
+    footer .social-media-links {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column: 1;
+    }
+
+    footer .social-media-links img {
+        width: 50px;
+    }
+
+    footer #contact {
+        grid-column: 2;
+        grid-row: 1;
+        width:max-content;
+    }
+
+    #map {
+        width: 60px;
+        height: 60px;
+        background-color: #FF684D;
+        margin:10px;
+    }
+
+    #footer-bar {
+        background-color: black;
+        color: white;
+        margin: 0 -2em;
+        padding: 10px;
+        grid-column-end: span 2;
+    }
+}

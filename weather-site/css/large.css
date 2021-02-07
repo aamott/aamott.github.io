@@ -1,0 +1,11 @@
+@media only screen and (min-width: 54.5em) {
+    #site-title {
+        font-size: 1.4em;
+        max-width: 390px;
+    }
+
+    #site-title img {
+        width: 90px;
+        height: 90px;
+    }
+}
