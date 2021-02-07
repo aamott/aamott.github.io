@@ -124,10 +124,10 @@ footer .social-media-links {
     display: none;
 }
 
-footer #map {
+#map {
     display: block;
     height: 200px;
-    width: 450px;
+    width: 100%;
     margin:5px 0 5px 0;
     background-color: rgba(46, 104, 220, 0.9);
 }
