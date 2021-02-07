@@ -1,3 +1,6 @@
+img {
+    object-fit: cover;
+}
 body {
     font-family: 'Roboto', sans-serif;
     margin:0;
@@ -63,7 +66,6 @@ main h2 {
 }
 
 #heroimg {
-    object-fit: cover;
     width: 100%;
     height: 150px;
     background-color: rgba(46, 104, 220, 0.9);
@@ -94,6 +96,8 @@ main h2 {
 }
 
 #article {
+    display: grid;
+    grid-template-rows: auto;
     padding: 0.2em 1.3em;
     outline: 1px solid #525252 ;
     background-color: #DDDDDD;
@@ -105,7 +109,7 @@ article h2 {
 #article img {
     order: 2;
     width: 100%;
-    height: 130px;
+    height: 90%;
     background-color: rgba(46, 104, 220, 0.9);
 }
 
@@ -116,7 +120,7 @@ footer {
     background-color: #AAAAAA;
 }
 
-footer.social-media-links {
+footer .social-media-links {
     display: none;
 }
 

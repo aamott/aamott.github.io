@@ -66,10 +66,11 @@
         outline: 1px solid black;
     }
 
-    #five-day-forecast img {display: flex;
+    #five-day-forecast img {
+        display: flex;
         margin: auto;
         background: rgb(81,226,217);
-background: radial-gradient(circle, rgba(255,255,255,0.37) 52%, rgba(221,221,221,1) 100%, rgba(221,221,221,1) 100%);
+        background: radial-gradient(circle, rgba(255,255,255,0.37) 52%, rgba(221,221,221,1) 100%, rgba(221,221,221,1) 100%);
         display: block;
     }
 
