@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lazy Loader Example</title>
+    <style>
+        .loading {
+            background-color: lightgray;
+            min-width:400px;
+            min-height:400px;
+            position:relative;
+        }
+        .placeholder-loading::before {
+            content:"";
+            display:block;
+            position:absolute;
+            left:-400px;
+            top:0;
+            height:100%;
+            width:400px;
+            background: linear-gradient(to right, transparent 0%, white 50%, transparent 100%);
+            animation:load 3s;
+            z-index:50;
+        }
+        .placeholder-loading {
+            display:inline-block;
+            position:relative;
+            overflow:hidden;
+        }
+        @keyframes load {
+            0% {
+                left:-400px;
+            }
+            100% {
+                left:100%;
+            }
+        }
+    </style>
+    <script>
+        window.addEventListener('load', (event) => {
+            lazyLoad();
+        });
+        function lazyLoad() {
+            const images = document.querySelectorAll("[data-src");
+            for(const image of images) {
+                image.src = image.getAttribute("data-src");
+            }
+            // console.log(images);
+        }
+    </script>
+</head>
+<body>
+    <div class="placeholder-loading"><img src="" alt="" class="loading" data-src="http://unsplash.it/400"></div>
+    <div class="placeholder-loading"><img src="" alt="" class="loading" data-src="http://unsplash.it/401"></div>
+    <div class="placeholder-loading"><img src="" alt="" class="loading" data-src="http://unsplash.it/402"></div>
+    <div class="placeholder-loading"><img src="" alt="" class="loading" data-src="http://unsplash.it/403"></div>
+    <div class="placeholder-loading"><img src="" alt="" class="loading" data-src="http://unsplash.it/404"></div>
+    <div class="placeholder-loading"><img src="" alt="" class="loading" data-src="http://unsplash.it/405"></div>
+    <div class="placeholder-loading"><img src="" alt="" class="loading" data-src="http://unsplash.it/406"></div>
+    <div class="placeholder-loading"><img src="" alt="" class="loading" data-src="http://unsplash.it/407"></div>
+    <div class="placeholder-loading"><img src="" alt="" class="loading" data-src="http://unsplash.it/408"></div>
+    <div class="placeholder-loading"><img src="" alt="" class="loading" data-src="http://unsplash.it/409"></div>
+</body>
+</html>
