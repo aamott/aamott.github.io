@@ -27,7 +27,8 @@
 }
 
 nav {
-    background-color: rgb(0, 174, 255);
+    background: rgb(57,171,244);
+background: linear-gradient(180deg, rgba(57,171,244,1) 0%, rgba(45,160,233,1) 50%, rgba(28,140,212,1) 100%);
     width: 100%;
 }
 
