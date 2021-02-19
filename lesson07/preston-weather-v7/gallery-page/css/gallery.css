@@ -16,6 +16,8 @@
     height: 90%;
     object-fit: cover;
     border-radius: 10px 10px 0 0;
+    filter: blur(0em) grayscale(0);
+    transition: filter 1s;
 }
 
 .gallery picture {
