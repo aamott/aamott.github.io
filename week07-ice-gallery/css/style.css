@@ -34,18 +34,6 @@ img:hover {
     filter: none;
 }
 
-
-/* .place-holder1 
-.place-holder2 
-.place-holder3 
-.place-holder4 
-.place-holder5 
-.place-holder6 
-.place-holder7 
-.place-holder8 
-.place-holder9 
-.place-holder0  */
-
 img:nth-child(1) { grid-area: a; }
 img:nth-child(2) { grid-area: b; }
 img:nth-child(3)  { grid-area: c; }
