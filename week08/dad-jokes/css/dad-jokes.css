@@ -1,0 +1,20 @@
+body {
+    background-color: black;
+}
+.dad-bg {
+    background: url('../images/dad-jokes-bg.jpg') no-repeat;
+    width: 700px;
+    height:700px;
+    margin:0 auto;
+    font-family: 'Coming Soon', cursive;
+    display: grid;
+    grid-template-columns:300px;
+}
+#dad-joke {
+    align-self:center;
+    font-size:45px;
+    padding-left:50px;
+}
+#dad-joke.small {
+    font-size:35px;
+}

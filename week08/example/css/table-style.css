@@ -1,0 +1,88 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.users{
+    max-width: 850px;
+    border-collapse: collapse;
+    font-size: 14px;
+    color: #4a4a4a;
+    margin: 0 auto;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    overflow: hidden;
+    width:100%;
+}
+.profile-pic img {
+    width: 43px;
+    border-radius: 150px;
+}
+.users td a:link, .users td a:visited, .users td a:hover, .users td a:active, .users td a:focus {
+    color: grey;
+    display: block;
+    text-align: center;
+    padding: 9px 0;
+    font-size: 0.8em;
+}
+.users td a:hover {
+    background-color: #dbe4ea;
+    border-radius: 150px;
+    color: red;
+}
+.users td a i {
+    padding: 3px 5px;
+}
+.users td a.edit:hover {
+    color: #3672df;
+}
+.users .date {
+    color: #9d9d9d;
+}
+.users b {
+    font-size: 1.1em;
+}
+.dropdown {
+    font-size:1em;
+    margin:0 5px;
+}
+tr.head {
+    background-color:#dbe4ea;
+}
+th {
+    text-align:left;
+    text-transform:uppercase;
+    color:#5b666e;
+    padding:21px 10px;
+    font-size:0.9em;
+    letter-spacing:1px;
+}
+td {
+    padding:15px 10px;
+}
+.profile-pic {
+    text-align: center;
+    padding:0;
+}
+tr:not(.head):hover {
+    background-color: #e7f2fe;
+}
+tr:nth-child(2n) {
+    background-color: #f5f5f8;
+}
+.users .active, .users .waiting {
+    background-color:#ddfff1;
+    padding: 7px 11px;
+    border-radius: 150px;
+    width: 65px;
+}
+.users .active i {
+    font-size: 0.8em;
+    color:#34bf76;
+}
+.users .waiting {
+    background-color: #fef9e4;
+}
+.users .waiting i {
+    font-size:0.8em;
+    color:#f3be16;
+}

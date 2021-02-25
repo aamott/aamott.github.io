@@ -1,0 +1,23 @@
+table {
+    border-collapse: collapse;
+}
+th {
+    background-color: lightblue;
+}
+td {
+    padding: 10px 15px;    
+}
+
+
+/* N-th child */
+/* tr:nth-child(2n + 2) {
+    background-color: yellow;
+} */
+
+tr:nth-child(2n) {
+    background-color: rgb(197, 241, 255);
+}
+
+tr:nth-child(2n +1) {
+    background-color: rgb(245, 245, 245);
+}

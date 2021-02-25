@@ -1,0 +1,5 @@
+@media only screen and (min-width: 850px) { 
+    video {
+        width: 700px;
+    }
+}
