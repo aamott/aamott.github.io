@@ -1,3 +1,39 @@
 body {
     font-family: "Ubuntu, sans-serif";
+    font-size: 1.3em;
+}
+table {
+    background-color: #B1BBBC;
+    text-align: center;
+}
+table caption {
+    background-color: #78B8C1;
+    font-weight: 900;
+    font-size: 1.2em;
+    padding: 7px;
+}
+table thead tr {
+    background-color: #5E8BA5;
+    color: white;
+}
+th {
+    padding: 5px 10px;
+}
+table td {
+    padding: 5px 10px;
+}
+table tr {
+    background-color: #E6F0ED;
+}
+table tr:nth-child(2n) {
+    background-color: #E4FFEE;
+}
+tfoot td {
+    font-size: 0.7em;
+    background-color: #78B8C1;
+}
+
+#max {
+    background-color: #5E8BA5;
+    color: white;
 }
