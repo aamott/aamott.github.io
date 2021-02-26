@@ -1,5 +1,5 @@
 body {
-    font-family: "Ubuntu, sans-serif";
+    font-family: 'Ubuntu', sans-serif;
     font-size: 1.3em;
 }
 table {
@@ -8,7 +8,7 @@ table {
 }
 table caption {
     background-color: #78B8C1;
-    font-weight: 900;
+    font-weight: 700;
     font-size: 1.2em;
     padding: 7px;
 }
