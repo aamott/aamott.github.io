@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/favicon.ico"  type="image/x-icon">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/menu.css">
+    <link rel="stylesheet" href="../css/small.css">
+    <link rel="stylesheet" href="../css/medium.css">
+    <link rel="stylesheet" href="../css/large.css">
+    <link rel="stylesheet" href="css/storm-center.css">
+    <script src="../js/menu.js"></script>
+    <script src="../js/page.js"></script>
+    <title>Preston Weather Site</title>
+</head>
+<body>
+    <div id="alert"><h3>Saturday = Preston Pancakes in the Park!  9:00 a.m. Saturday at the city park pavilion.</h3></div>
+    <header>
+        <div id="header-content">
+            <div id="site-title">
+                <img src="../images/logo.png">
+                <div>
+                    <h2>The Weather Site</h2>
+                    <p>Something inspiring</p>
+                </div>
+            </div>
+            <p id="menu-icon"><a href="#">&Congruent;</a></p>
+        </div>
+
+        <nav>
+            <ul id="navigation">
+                <li><a href="../preston.html">Home</a></li>
+                <li><a href="#">Preston</a></li>
+                <li><a href="#">Soda Springs</a></li>
+                <li><a href="#">Fish Haven</a></li>
+                <li><a href="storm-center.html">Storm Center</a></li>
+                <li><a href="../gallery-page/gallery.html">Gallery</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Report Unusual Weather Events</h2>
+        <form action="thank-you.html">
+            <label for="full-name"><div>Full Name*</div><input name="full-name" type="text" required pattern="[A-Za-z ]{5,}"></label>
+            <label for="email"><div>Email</div><input name="email" type="email" placeholder="user@example.com"></label>
+            <label for="phone"><div>Phone*</div><input name="phone" type="tel" required></label>
+            <label for="zip"><div>Zip Code*</div><input name="zip" type="number" required></label>
+            <label for="stormtype"><div>Storm Type</div>
+                <input name="stormtype" list="stormtypes">
+                <datalist id="stormtypes">
+                    <option value="Flash Flood">
+                    <option value="Hail">
+                    <option value="Hurricane">
+                    <option value="Thunderstorm">
+                    <option value="Tornado">
+                </datalist>
+            </label>
+            <label for="severity"><div>Storm Severity</div>
+                <input name="severity" type="range" min="1" max="10">
+            </label>
+            <label for="region"><div>Storm Region</div>
+                <select name="region">
+                    <option selected value="" disabled>Select Region...</option>
+                    <option value="Preston">Preston</option>
+                    <option value="Soda Springs">Soda Springs</option>
+                    <option value="Fish Haven">Fish Haven</option>
+                </select>
+            </label>
+            <label for="danger-level-radio"><div>User In-Danger Level</div>
+                <div>
+                <input id="yes" name="danger-level" type="radio"> Yes
+                </div>
+                <div>
+                    <input id="maybe" name="danger-level" type="radio"> Maybe
+                </div>
+                <div>
+                    <input id="no" name="danger-level" type="radio"> No
+                </div>
+            </label>
+
+            <label for="comments">Additional Information or Comments
+                <textarea name="comments"></textarea>
+            </label>
+            <input id="submit" type="submit" value="Report">
+        </form>
+    </main>
+
+    <footer>
+        <div id="footer-content">
+            <div id="contact">
+                <h3 id="contact-info">Contact Information</h3>
+                <p id="address">📍 1422 N 78 S Address Street</p>
+                <p>&#9993; <a href="#">email@mail.com</a></p>
+                <p>&#x260E; 123-456-7890</p>
+                <section class="social-media-links">
+                    <img class="social-media" src="../images/instagram.png">
+                    <img class="social-media" src="../images/facebook.png">
+                    <img class="social-media" src="../images/twitter.png">
+                </section>
+            </div>
+            <img id="map" src="../images/map.png">
+        </div>
+        <div id="footer-bar">
+            <p class='legal'>&copy; <span id="copyrightyear"></span> | Adam R. Amott | Utah | <a href="https://www.byui.edu/online">BYU Idaho Online</a></p>
+            <p class="highlight">Today is <span id="currentdate"></span></p>
+        </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script>
+        WebFont.load({
+          google: {
+            families: ['Roboto']
+          }
+        });
+      </script>
+</body>
+</html>

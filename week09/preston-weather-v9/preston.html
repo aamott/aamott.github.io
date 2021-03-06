@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/favicon.ico"  type="image/x-icon">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/small.css">
+    <link rel="stylesheet" href="css/medium.css">
+    <link rel="stylesheet" href="css/large.css">
+    <script src="js/menu.js"></script>
+    <script src="js/page.js"></script>
+    <title>Preston Weather Site</title>
+</head>
+<body>
+    <div id="alert"><h3>Saturday = Preston Pancakes in the Park!  9:00 a.m. Saturday at the city park pavilion.</h3></div>
+    <header>
+        <div id="header-content">
+            <div id="site-title">
+                <img src="images/logo.png">
+                <div>
+                    <h2>The Weather Site</h2>
+                    <p>Something inspiring</p>
+                </div>
+            </div>
+            <p id="menu-icon"><a href="#">&Congruent;</a></p>
+        </div>
+
+        <nav>
+            <ul id="navigation">
+                <li><a href="preston.html">Home</a></li>
+                <li><a href="#">Preston</a></li>
+                <li><a href="#">Soda Springs</a></li>
+                <li><a href="#">Fish Haven</a></li>
+                <li><a href="storm-center/storm-center.html">Storm Center</a></li>
+                <li><a href="gallery-page/gallery.html">Gallery</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div id="cities">
+            <div id="preston" class="herodiv">
+                <img srcset="images/preston.jpg 480w,
+                                    images/preston.jpg 800w,
+                                    images/preston.jpg 1150w"
+                        sizes="(max-width: 600px) 480px,
+                                (max-width: 900px) 800px,
+                                    1150px"
+                        src="images/preston.jpg" 
+                        id="heroimg">
+                <section class="hero-title">
+                    <h2>Preston</h2>
+                </section>
+                
+            </div>
+
+            <div id="fish-haven" class="herodiv">
+                <img srcset="images/fish-haven.jpg 480w,
+                                    images/fish-haven.jpg 800w,
+                                    images/fish-haven.jpg 1150w"
+                        sizes="(max-width: 600px) 480px,
+                                (max-width: 900px) 800px,
+                                    1150px"
+                        src="images/fish-haven.jpg" 
+                        id="heroimg">
+                <section class="hero-title">
+                    <h2>Fish Haven</h2>
+                </section>
+            </div>
+
+            <div id="soda-springs" class="herodiv">
+                <img srcset="images/soda-springs.jpg 480w,
+                                    images/soda-springs.jpg 800w,
+                                    images/soda-springs.jpg 1150w"
+                        sizes="(max-width: 600px) 480px,
+                                (max-width: 900px) 800px,
+                                    1150px"
+                        src="images/soda-springs.jpg" 
+                        id="heroimg">
+                <section class="hero-title">
+                    <h2>Soda Springs</h2>
+                </section>
+            </div>
+        </div>
+
+        <div id="five-day-forecast">
+            <h2>Five Day Forecast</h2>
+            <div id="forecast">
+                <img src="images/weather-icons/rainy.png" width=80px height=80px>
+                <img src="images/weather-icons/stormy.png" width=80px height=80px>
+                <img src="images/weather-icons/windy.png" width=80px height=80px>
+                <img src="images/weather-icons/snowy.png" width=80px height=80px>
+                <img src="images/weather-icons/stormy.png" width=80px height=80px>
+            </div>
+        </div>
+
+        <div id="article">
+            <h2>Article Title</h2>
+            <img src="images/tree.jpg" alt="A nice tree">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias iure molestiae qui corrupti natus dolor laudantium labore facilis fugiat voluptatibus eligendi, sint doloribus accusantium. Modi tempore, dolorum, quod ratione distinctio debitis placeat saepe, dolores magni incidunt voluptates quos adipisci eius hic ipsum. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere magnam, quae tempore est fugiat architecto praesentium tenetur saepe aliquam illo illum quo, voluptas nihil totam, maiores vitae accusamus! Alias, cum.</p>          
+        </div>
+    </main>
+
+    <footer>
+        <div id="footer-content">
+            <div id="contact">
+                <h3 id="contact-info">Contact Information</h3>
+                <p id="address">📍 1422 N 78 S Address Street</p>
+                <p>&#9993; <a href="#">email@mail.com</a></p>
+                <p>&#x260E; 123-456-7890</p>
+                <section class="social-media-links">
+                    <img class="social-media" src="images/instagram.png">
+                    <img class="social-media" src="images/facebook.png">
+                    <img class="social-media" src="images/twitter.png">
+                </section>
+            </div>
+            <img id="map" src="images/map.png">
+        </div>
+        <div id="footer-bar">
+            <p class='legal'>&copy; <span id="copyrightyear"></span> | Adam R. Amott | Utah | <a href="https://www.byui.edu/online">BYU Idaho Online</a></p>
+            <p class="highlight">Today is <span id="currentdate"></span></p>
+        </div>
+    </footer>
+    <script src="js/city-data.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script>
+        WebFont.load({
+          google: {
+            families: ['Roboto']
+          }
+        });
+      </script>
+</body>
+</html>
