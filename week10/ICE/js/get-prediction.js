@@ -1,7 +1,7 @@
 const cityID = "5604473";
 const units = "imperial";
 const key = "352e0185b01df25e978724a23f97f5f6";
-const requestURL = "http://api.openweathermap.org/data/2.5/forecast?id=" + cityID + "&units="+units+"&appid="+key;
+const requestURL = "https://api.openweathermap.org/data/2.5/forecast?id=" + cityID + "&units="+units+"&appid="+key;
 
 fetch(requestURL)
     .then(function (response) {
@@ -13,7 +13,7 @@ fetch(requestURL)
         // TODAY
         //icon
         let icon = document.getElementById("icon");
-        icon.src = "http://openweathermap.org/img/wn/" + jsonObject.list[0].weather[0].icon + ".png";
+        icon.src = "https://openweathermap.org/img/wn/" + jsonObject.list[0].weather[0].icon + ".png";
 
         //show city
         document.getElementById("city").innerText = jsonObject.city.name;
@@ -48,7 +48,7 @@ fetch(requestURL)
                 // icon
                 let iconDisp = document.createElement("img");
                 iconDisp.classList.add("daily-icon")
-                iconDisp.src = "http://openweathermap.org/img/wn/" + jsonObject.list[i].weather[0].icon + ".png";
+                iconDisp.src = "https://openweathermap.org/img/wn/" + jsonObject.list[i].weather[0].icon + ".png";
                 content.append(iconDisp);
 
                 // temp
