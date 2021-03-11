@@ -8,8 +8,6 @@ fetch(requestURL)
         return response.json();
     })
     .then(function (jsonObject) {
-        console.log(jsonObject);
-
         const dayNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
         // TODAY
@@ -64,6 +62,5 @@ fetch(requestURL)
                 //Advance day
                 prev_day = new Date(day);
 			}
-            
 		}
     });
