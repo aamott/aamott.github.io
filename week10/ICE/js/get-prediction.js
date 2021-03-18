@@ -4,11 +4,11 @@ const key = "352e0185b01df25e978724a23f97f5f6";
 const requestURL = "https://api.openweathermap.org/data/2.5/forecast?id=" + cityID + "&units="+units+"&appid="+key;
 
 fetch(requestURL)
-    .then(function (response) {
-        return response.json();
-    })
-    .then(function (jsonObject) {
+    .then(response => { return response.json(); })
+    .then( (jsonObject) => {
         const dayNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+
+        console.log(jsonObject);
 
         // TODAY
         //icon

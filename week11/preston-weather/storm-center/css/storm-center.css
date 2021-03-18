@@ -1,0 +1,25 @@
+form {
+    display: flex;
+    flex-flow: column;
+    max-width: 400px;
+    margin-left: 10px;
+}
+form label {
+    margin-top: 20px;
+}
+
+#submit {
+    margin: 10px;
+    width: max-content;
+}
+
+form p {
+    margin-left: 15px;
+    font-size: 1.2em;
+}
+
+@media only screen and (min-width: 34.5em) {
+    form {
+        margin-left: 20px;
+    }   
+}

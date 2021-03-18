@@ -1,0 +1,21 @@
+@media only screen and (min-width: 54.5em) {
+    #alert {
+        font-size: 1.1em;
+    }
+    #site-title {
+        font-size: 1.4em;
+        max-width: 400px;
+    }
+
+    #site-title img {
+        width: 90px;
+        height: 90px;
+    }
+
+    #five-day-forecast #forecast {
+        display: grid;
+        grid-template-columns:repeat(5, 1fr);
+        grid-gap: 9px;
+    }
+    
+}
