@@ -13,7 +13,7 @@ window.addEventListener('load', (event) => {
     const cityID = "5607916"; // Soda Springs
     const units = "imperial";
     const key = "352e0185b01df25e978724a23f97f5f6";
-    const todayURL = "http://api.openweathermap.org/data/2.5/weather?id=" + cityID + "&units="+units+"&appid="+key;
+    const todayURL = "https://api.openweathermap.org/data/2.5/weather?id=" + cityID + "&units="+units+"&appid="+key;
     fetch(todayURL)
        .then(response => response.json())
        .then(jsObject => {
@@ -29,7 +29,7 @@ window.addEventListener('load', (event) => {
            document.getElementById('wind-speed').textContent = Math.round(jsObject.wind.speed);
        });
     // Five Day Forecast
-   const fiveDayURL = "http://api.openweathermap.org/data/2.5/forecast?id=" + cityID + "&units="+units+"&appid="+key;
+   const fiveDayURL = "https://api.openweathermap.org/data/2.5/forecast?id=" + cityID + "&units="+units+"&appid="+key;
    
    fetch(fiveDayURL)
        .then(response => response.json())
