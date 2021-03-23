@@ -22,7 +22,7 @@ window.addEventListener('load', (event) => {
            // Today's Summary
            const main = jsObject.main;
            const weather = jsObject.weather;
-           document.getElementById('current-temp').textContent = Math.round(main.temp);
+        //    document.getElementById('current-temp').textContent = Math.round(main.temp);
            document.getElementById('condition').textContent = weather[0].description;
            document.getElementById('high-temp').textContent = Math.round(main.temp_max);
            document.getElementById('humidity').textContent = Math.round(main.humidity);
