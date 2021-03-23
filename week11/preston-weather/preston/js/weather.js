@@ -43,7 +43,7 @@ window.addEventListener('load', (event) => {
 
                // Run once for every day
                let day = new Date(jsObject.list[i].dt_txt);
-               if ((day.getHours()+1) % 16 ==0) {// != prev_day.getDay()) {
+               if ((day.getHours()+1) % 18 ==0) {
    
                    //daily forecast body
                    let forecastBody = document.createElement("section");
