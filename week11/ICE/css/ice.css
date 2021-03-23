@@ -1,0 +1,55 @@
+
+.event {
+    position: relative;
+    border: 1px solid gray;
+    color: white;
+    background-color: gray;   
+    padding-left: 100px;
+    margin:  auto;
+    max-width: 800px;
+}
+.year {
+    margin: 0;
+    font-size:14px;
+}
+.day {
+    font-size: 40px;
+    color:white;
+    padding: 0;
+    margin: 0;
+}
+.month {
+    margin: 0;
+    font-size:14px;
+}
+.date {
+    position: absolute;
+    top: 0px;
+    left: 15px;
+}
+.title{
+    font-size: 30px;
+    margin-bottom: 0;
+    
+}
+.far-fa-clock{
+    margin-top: 0;
+}
+.event:nth-child(1){
+    background-color: green;
+}
+.event:nth-child(2){
+    background-color: blue;
+}
+.event:nth-child(3){
+    background-color: pink;
+}
+.event:nth-child(4){
+    background-color: skyblue;
+}
+.event:nth-child(5){
+    background-color: orange;
+}
+.event:nth-child(6){
+    background-color: purple;
+}
