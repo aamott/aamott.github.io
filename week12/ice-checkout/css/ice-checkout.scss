@@ -202,7 +202,7 @@ h1, h2, h3, h4, h5, h6, p, ul, li {
     }
 } // end #payment
 
-@media only screen and (min-width: 54.5em) {
+@media only screen and (min-width: 800px) {
     #payment-page {
         display: grid;
         grid-template-columns: 400px 400px;
