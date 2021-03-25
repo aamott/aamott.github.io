@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        rel="stylesheet">
+    <link href="css/ice-checkout.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <section id="payment-page">
+        <section id="order-summary">
+            <div id="progress-header">
+
+                <ul id="progress-bar">
+                    <li class="circle">&#10004;</li>
+                    <li><hr></li>
+                    <li class="circle"></li>
+                    <li><hr></li>
+                    <li  class="circle unviewed"> </li>
+                </ul>
+                <ul id="progress-bar-labels">
+                    <li>Shipping</li>
+                    <li>Payment details</li>
+                    <li>Checkout</li>
+                </ul>
+            </div>
+            <h2>Order Summary</h2>
+            
+            <div id="summary">
+                <p>Order Subtotal</p>
+                <h3>$ 46.95</h3>
+                <p>Shipping  &amp; Handling</p>
+                <h3>$ 6.00</h3>
+                <p>Sales Tax</p>
+                <h3>$ 8.05</h3>
+                <hr>
+                <p>Payment Due</p>
+                <h3 id="total">$ 61.00</h3>
+            </div>
+
+            <a href="#">Return to cart</a>
+
+        
+        </section>
+
+        <section id="payment">
+            <img src="images/paypal.jpg" alt="Accepts Visa and PayPal">
+            <h2>Payment Details</h2>
+
+            <form id="payment-details">
+                <section id="cardinfo">
+                    <label for="name">Cardholder Name
+                    <input id="name" type="text" placeholder="Name"></label>
+                    
+                    <label for="cardnum">Card Number
+                    <input id="cardnum" type="text" placeholder="1234 5678 9012 3456"></label>
+                    
+                    <label  id="expiration">Expiration Date
+                        <div>
+                            <label for="month">Month
+                                <select id="expiremonth">
+                                    <option>06</option>
+                                </select>
+                            </label>
+
+                            <label for="expireyear">Year
+                                <select id="expireyear">
+                                    <option>18</option>
+                                </select>
+                            </label>
+                        </div>
+                    </label>
+
+                    <label id="cvv-label" for="cvv">CVV  <a>?</a>
+                    <input id="cvv" type="password" placeholder="&bull; &bull; &bull;"></label>
+
+                    <label for="billaddress">Billing Address
+                    <input id="billaddress" type="text" placeholder="25 Bloor St E, Toronto, ON"></label>
+                </section>
+                <label for="sameaddress" id="sameAddressLabel"><input id="sameaddress" type="checkbox" >Same as shipping address </label>
+            
+                <button id="next">Next</button>
+                <button id="cancel">Cancel</button>
+            </form>
+            <aside><span class="material-icons">lock</span>This is a secure transaction</aside>
+        </section>
+    </section>
+</body>
+</html>
