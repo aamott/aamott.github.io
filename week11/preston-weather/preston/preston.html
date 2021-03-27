@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="images/favicon.ico"  type="image/x-icon">
+    <link rel="shortcut icon" href="../images/favicon.ico"  type="image/x-icon">
     <link rel="stylesheet" href="../css/normalize.css">
     <link rel="stylesheet" href="../css/weather-pages/menu.css">
     <link rel="stylesheet" href="../css/weather-pages/small.css">
@@ -43,7 +43,6 @@
     <main>
         <h2>Preston Idaho</h2>
         <div class="herodiv">
-
             <img srcset="images/hero-img/hero-clouds-568w.jpeg 480w,
                                 images/hero-img/hero-clouds-854w.jpeg 800w,
                                 images/hero-img/hero-clouds-1366w.jpeg 1150w"
@@ -55,7 +54,7 @@
             <section id="weather-summary">
                 <h2>Weather Summary</h2>
                 <p>Currently: <!--<span id="current-temp"></span> °F--> <span id="condition"></span></p>
-                <p>High: <span id="high-temp"></span> °F</p>
+                <p>High: <span id="high-temp"></span></p>
                 <p>Wind Chill: <span id="wind-chill"></span></p>
                 <p>Humidity: <span id="humidity"></span>%</p>
                 <p>Wind Speed: <span id="wind-speed"></span> mph</p>
@@ -66,6 +65,9 @@
             <h2>Five Day Forecast</h2>
             <div id="forecast"></div>
         </div>
+        
+        <aside id="upcoming-events">
+        </aside>
 
         <div id="article">
             <h2>Article Title</h2>
