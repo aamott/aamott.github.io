@@ -22,22 +22,33 @@
     }
     #weather-summary {
         position: absolute;
-        width: 260px;
+        width: 310px;
         top: 30px; 
         left: 30px;
         color: white;
         background-color: rgba(0, 174, 255,0.47);
-        padding-bottom: 1.2em;
+        padding: 0 0 1.2em 0;
+        display: grid;
+        grid-template-areas: 
+                        "title title"
+                        "labels data";
+        grid-template-columns: 4fr 5fr;
     }
     #weather-summary h2 {
+        grid-area: title;
+        text-align: center;
         font-size: 1.7em;
         text-decoration: underline;
     }
     #weather-summary p {
         font-size: 1.2em;
         margin: 0.4em;
+        margin-left: 0;
     }
-
+    #weather-summary .lefthand {
+        grid-area: labels;
+        text-align: right;
+    }
 
     #five-day-forecast {
         background-color: transparent;
@@ -80,6 +91,13 @@
         font-style: italic;
     }
 
+    #upcoming-events {
+        padding-left: 25px;    
+    }
+    #upcoming-events li {
+        font-size: 1.2em;
+        line-height: 2em;   
+    }
 
     #article {
         margin-bottom: 20px;

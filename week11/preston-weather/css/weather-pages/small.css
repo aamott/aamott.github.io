@@ -82,18 +82,23 @@ main h2 {
     padding: 5%;
     outline: 1px solid #525252 ;
 }
-
 #five-day-forecast img {
     display: none;
     object-fit: cover;
-
 }
-
 #five-day-forecast h2 {
     text-align: center;
     font-weight: 600;
 }
-
+aside  {
+    padding-left: 5%;
+    background-color: #DDDDDD;
+    border: 1px solid black;
+    margin: 15px 0;
+}
+aside h2 {
+    margin-left: 0;
+}
 #article {
     display: grid;
     grid-template-rows: auto;
@@ -101,7 +106,6 @@ main h2 {
     outline: 1px solid #525252 ;
     background-color: #DDDDDD;
 }
-
 article h2 {
     font-weight: 600;
 }

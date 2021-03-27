@@ -25,8 +25,8 @@ window.addEventListener('load', (event) => {
         //    document.getElementById('current-temp').textContent = Math.round(main.temp);
            document.getElementById('condition').textContent = weather[0].description;
            document.getElementById('high-temp').textContent = Math.round(main.temp_max) + " °F";
-           document.getElementById('humidity').textContent = Math.round(main.humidity);
-           document.getElementById('wind-speed').textContent = Math.round(jsObject.wind.speed);
+           document.getElementById('humidity').textContent = Math.round(main.humidity) + '%';
+           document.getElementById('wind-speed').textContent = Math.round(jsObject.wind.speed) + " mph";
        });
     // Five Day Forecast
    const fiveDayURL = "https://api.openweathermap.org/data/2.5/forecast?id=" + cityID + "&units="+units+"&appid="+key;

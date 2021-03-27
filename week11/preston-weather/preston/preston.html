@@ -12,6 +12,7 @@
     <script src="../js/menu.js"></script>
     <script src="../js/page.js"></script>
     <script src="js/weather.js"></script>
+    <script src="js/loadTownEvents.js"></script>
     <title>Preston Weather Site</title>
 </head>
 <body>
@@ -53,11 +54,20 @@
                     id="heroimg">
             <section id="weather-summary">
                 <h2>Weather Summary</h2>
-                <p>Currently: <!--<span id="current-temp"></span> °F--> <span id="condition"></span></p>
-                <p>High: <span id="high-temp"></span></p>
-                <p>Wind Chill: <span id="wind-chill"></span></p>
-                <p>Humidity: <span id="humidity"></span>%</p>
-                <p>Wind Speed: <span id="wind-speed"></span> mph</p>
+                <div class="lefthand">
+                    <p>Current:</p>
+                    <p>High:</p>
+                    <p>Wind Chill:</p>
+                    <p>Humidity:</p>
+                    <p>Wind Speed:</p>
+                </div>
+                <div class="righthand">
+                    <p id="condition"></p>
+                    <p id="high-temp"></p>
+                    <p id="wind-chill"></p>
+                    <p id="humidity"></p>
+                    <p id="wind-speed"></p>
+                </div>
             </section>
         </div>
 
@@ -65,7 +75,7 @@
             <h2>Five Day Forecast</h2>
             <div id="forecast"></div>
         </div>
-        
+
         <aside id="upcoming-events">
         </aside>
 
