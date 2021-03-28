@@ -17,5 +17,8 @@
         grid-template-columns:repeat(5, 1fr);
         grid-gap: 9px;
     }
-    
+    #article img {
+        width: 60%;
+        float: right;
+    }
 }

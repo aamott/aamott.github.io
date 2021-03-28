@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="images/favicon.ico"  type="image/x-icon">
+    <link rel="shortcut icon" href="../images/favicon.ico"  type="image/x-icon">
     <link rel="stylesheet" href="../css/normalize.css">
     <link rel="stylesheet" href="../css/weather-pages/menu.css">
     <link rel="stylesheet" href="../css/weather-pages/small.css">
@@ -12,7 +12,8 @@
     <script src="../js/menu.js"></script>
     <script src="../js/page.js"></script>
     <script src="js/weather.js"></script>
-    <title>Preston Weather Site</title>
+    <script src="js/loadTownEvents.js"></script>
+    <title>WeatherDays</title>
 </head>
 <body>
     <div id="alert"><h3>Saturday = Preston Pancakes in the Park!  9:00 a.m. Saturday at the city park pavilion.</h3></div>
@@ -21,7 +22,7 @@
             <div id="site-title">
                 <img src="../images/logo.png">
                 <div>
-                    <h2>The Weather Site</h2>
+                    <h2>WeatherDays</h2>
                     <p>Whether there be weather or not</p>
                 </div>
             </div>
@@ -41,9 +42,8 @@
     </header>
 
     <main>
-        <h2>Soda Springs</h2>
+        <h2>Soda Springs, Idaho</h2>
         <div class="herodiv">
-
             <img srcset="images/hero-img/hero-clouds-568w.jpeg 480w,
                                 images/hero-img/hero-clouds-854w.jpeg 800w,
                                 images/hero-img/hero-clouds-1366w.jpeg 1150w"
@@ -54,11 +54,20 @@
                     id="heroimg">
             <section id="weather-summary">
                 <h2>Weather Summary</h2>
-                <p>Currently: <span id="current-temp"></span> °F <span id="condition"></span></p>
-                <p>High: <span id="high-temp"></span> °F</p>
-                <p>Wind Chill: <span id="wind-chill"></span></p>
-                <p>Humidity: <span id="humidity"></span>%</p>
-                <p>Wind Speed: <span id="wind-speed"></span> mph</p>
+                <div class="lefthand">
+                    <p>Current:</p>
+                    <p>High:</p>
+                    <p>Wind Chill:</p>
+                    <p>Humidity:</p>
+                    <p>Wind Speed:</p>
+                </div>
+                <div class="righthand">
+                    <p id="condition"></p>
+                    <p id="high-temp"></p>
+                    <p id="wind-chill"></p>
+                    <p id="humidity"></p>
+                    <p id="wind-speed"></p>
+                </div>
             </section>
         </div>
 
@@ -67,11 +76,17 @@
             <div id="forecast"></div>
         </div>
 
+        <aside id="upcoming-events">
+        </aside>
+
         <div id="article">
-            <h2>Article Title</h2>
-            <img src="../images/tree.jpg" alt="A nice tree">
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias iure molestiae qui corrupti natus dolor laudantium labore facilis fugiat voluptatibus eligendi, sint doloribus accusantium. Modi tempore, dolorum, quod ratione distinctio debitis placeat saepe, dolores magni incidunt voluptates quos adipisci eius hic ipsum. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere magnam, quae tempore est fugiat architecto praesentium tenetur saepe aliquam illo illum quo, voluptas nihil totam, maiores vitae accusamus! Alias, cum.</p>
-            
+            <h2>Large Number of Rainbow Trout To Be Released In Southeast Idaho Rivers</h2>
+            <img src="images/rainbow-trout.jpg" alt="rainbow trout in a river">
+            <p>Bloomington, ID — Idaho Fish and Game will begin releasing catchable-sized rainbow trout throughout southeastern Idaho in August.</p>
+            <p> They plan to release roughly 200 in Bloomington Creek and nearly 1,000 in Cub River over the coming weeks.</p>
+            <p> A first group of trout will be released into the Cub River starting on August 5, while the Bloomington Creek and second Cub River groups will be released starting August 19.</p>
+            <p> The number of trout released could be affected by weather, water conditions, equipment problems or schedule changes.</p>
+            <p><i>Large number of rainbow trout to be released in SOUTHEAST Idaho Rivers. (n.d.). Retrieved March 27, 2021, from <a href="https://mylocalradio.com/large-number-of-rainbow-trout-to-be-released-in-southeast-idaho-rivers/">https://mylocalradio.com/large-number-of-rainbow-trout-to-be-released-in-southeast-idaho-rivers/</a></i></p>
         </div>
     </main>
 

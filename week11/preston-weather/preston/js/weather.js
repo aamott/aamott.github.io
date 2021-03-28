@@ -22,7 +22,6 @@ window.addEventListener('load', (event) => {
            // Today's Summary
            const main = jsObject.main;
            const weather = jsObject.weather;
-        //    document.getElementById('current-temp').textContent = Math.round(main.temp);
            document.getElementById('condition').textContent = weather[0].description;
            document.getElementById('high-temp').textContent = Math.round(main.temp_max) + " °F";
            document.getElementById('humidity').textContent = Math.round(main.humidity) + '%';
@@ -62,11 +61,11 @@ window.addEventListener('load', (event) => {
            }
        })
        .then(() => {
-           // Windchill
-           let temp = parseInt(document.getElementById("high-temp").innerText);
-           let windSpeed = parseInt(document.getElementById("wind-speed").innerText);
-           
-           let windChill = calcWindchill(temp, windSpeed)
-           document.getElementById("wind-chill").innerText = windChill + ((windChill == "N/A") ? "" : " °F");
-       })
+            // Windchill
+            let temp = parseInt(document.getElementById("high-temp").innerText);
+            let windSpeed = parseInt(document.getElementById("wind-speed").innerText);
+            
+            let windChill = calcWindchill(temp, windSpeed)
+            document.getElementById("wind-chill").innerText = windChill + ((windChill == "N/A") ? "" : " °F");
+        })
 });

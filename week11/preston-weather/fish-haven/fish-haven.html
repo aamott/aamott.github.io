@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="images/favicon.ico"  type="image/x-icon">
+    <link rel="shortcut icon" href="../images/favicon.ico"  type="image/x-icon">
     <link rel="stylesheet" href="../css/normalize.css">
     <link rel="stylesheet" href="../css/weather-pages/menu.css">
     <link rel="stylesheet" href="../css/weather-pages/small.css">
@@ -12,6 +12,7 @@
     <script src="../js/menu.js"></script>
     <script src="../js/page.js"></script>
     <script src="js/weather.js"></script>
+    <script src="js/loadTownEvents.js"></script>
     <title>Preston Weather Site</title>
 </head>
 <body>
@@ -21,7 +22,7 @@
             <div id="site-title">
                 <img src="../images/logo.png">
                 <div>
-                    <h2>The Weather Site</h2>
+                    <h2>WeatherDays</h2>
                     <p>Whether there be weather or not</p>
                 </div>
             </div>
@@ -41,9 +42,8 @@
     </header>
 
     <main>
-        <h2>Fish Haven</h2>
+        <h2>Fish Haven, Idaho</h2>
         <div class="herodiv">
-
             <img srcset="images/hero-img/hero-clouds-568w.jpeg 480w,
                                 images/hero-img/hero-clouds-854w.jpeg 800w,
                                 images/hero-img/hero-clouds-1366w.jpeg 1150w"
@@ -54,11 +54,20 @@
                     id="heroimg">
             <section id="weather-summary">
                 <h2>Weather Summary</h2>
-                <p>Currently: <span id="current-temp"></span> °F <span id="condition"></span></p>
-                <p>High: <span id="high-temp"></span> °F</p>
-                <p>Wind Chill: <span id="wind-chill"></span></p>
-                <p>Humidity: <span id="humidity"></span>%</p>
-                <p>Wind Speed: <span id="wind-speed"></span> mph</p>
+                <div class="lefthand">
+                    <p>Current:</p>
+                    <p>High:</p>
+                    <p>Wind Chill:</p>
+                    <p>Humidity:</p>
+                    <p>Wind Speed:</p>
+                </div>
+                <div class="righthand">
+                    <p id="condition"></p>
+                    <p id="high-temp"></p>
+                    <p id="wind-chill"></p>
+                    <p id="humidity"></p>
+                    <p id="wind-speed"></p>
+                </div>
             </section>
         </div>
 
@@ -67,11 +76,40 @@
             <div id="forecast"></div>
         </div>
 
+        <aside id="upcoming-events">
+        </aside>
+
         <div id="article">
-            <h2>Article Title</h2>
-            <img src="../images/tree.jpg" alt="A nice tree">
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias iure molestiae qui corrupti natus dolor laudantium labore facilis fugiat voluptatibus eligendi, sint doloribus accusantium. Modi tempore, dolorum, quod ratione distinctio debitis placeat saepe, dolores magni incidunt voluptates quos adipisci eius hic ipsum. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere magnam, quae tempore est fugiat architecto praesentium tenetur saepe aliquam illo illum quo, voluptas nihil totam, maiores vitae accusamus! Alias, cum.</p>
-            
+            <h2>Sweetly Divine owners reminisce as Logan bakery prepares to close</h2>
+            <img src="images/sweetlyDivine.jpg" alt="Sweetly Divine owner mixing batter">
+            <p>The Logan bakery Sweetly Divine is closing its physical location on May 15 after a Salt Lake City developer declined to renew the business’s lease, according to the owners.</p>
+            <p> Mark and Marilee Grodkowski made the announcement on Facebook this past Wednesday concerning Woodbury Corporation’s decision.</p>
+            <p> “This isn’t our choice, but we are moving forward with faith and gratitude to the many loyal customers and friends that have supported us these past 15 years,” the couple wrote about their business, which opened in 2006.</p></p>
+            <p> Woodbury Corporation intends to shutter the brick-and-mortar establishment, located at 1309 Main Street, and have another tenant move in, according to Sweetly Divine’s Facebook post.</p>
+            <p> Amanda Butterfield, a spokeswoman for Woodbury Corporation, provided a prepared statement to The Herald Journal on Friday in response to Sweetly Divine’s announcement.</p>
+            <p> “There are two sides to this story, but we don’t find it productive to discuss disputes with tenants publicly,” she wrote.</p>
+            <p> Butterfield did not confirm whether a new business would move in and told the newspaper her company had nothing more to say about Sweetly Divine.</p>
+            <p> In an email to The Herald Journal, Mark said he is keeping most of his three full-time and three on-call employees.</p>
+            <p> “All will depends (sic) on how fast we can increase the sales of jams and jellies,” he wrote. “That will be my priority, to make the business grow. I can only do as much as my employees are able to make it with me.”</p>
+            <p> On Facebook, the Grodkowskis addressed questions from customers about why Sweetly Divine can’t simply find another place to open up shop in Cache Valley, writing, “it’s very costly to do so and we feel that that just isn’t the right choice for us right now.”</p>
+            <p> Mark estimated that it takes around $150,000 to open a shop like Sweetly Divine.</p>
+            <p> “When I feel I can spare that kind of money again,” he wrote, “I may consider opening another retail shop.”</p>
+            <p> Sweetly Divine is not completely down and out, though. Its wholesale operation, selling jams and jellies in bulk to local businesses like Lee’s and Gossner’s, will continue. The exception being that a large portion of their business is “unfortunately unsuitable for retail,” the couple wrote.</p>
+            <p> In addition to wholesale, Sweetly Divine will continue to sell its products online, the couple stated on Facebook.</p>
+            <p> The newspaper also inquired about how the pandemic has impacted Sweetly Divine. Mark pointed only to his wholesale business.</p>
+            <p> “All sales of jams and jellies to all my distributors and locations stopped for five months,” he wrote. “It was very scary time.”</p>
+            <p> Information about Sweetly Divine and the Grodkowskis was found on the business’s official website.</p>
+            <p> Mark is a Polish immigrant who was a pastry chef at Jackson Lake Lodge in Grand Teton National Park in 1988, the same year he met his wife.</p>
+            <p> Five years later, “Mark’s Specialties” was opened, providing pastries to hotels and restaurants in Northern Utah.</p>
+            <p> But Marilee “craved the country life” and they were both “moved by the small town atmosphere and natural beauty” of Logan while visiting there.</p>
+            <p> Mark wrote in an email that “we fell in love with the valley.”</p>
+            <p> Sweetly Divine served pastries at first, but the couple wanted to widen the menu, so they added soup and sandwiches.</p>
+            <p> “Sometimes people are afraid when they hear ‘jalapeno jellies’ are on the sandwiches. But Mark gives out free samples and gets them hooked,” the website states.</p>
+            <p> Still, Sweetly Divine has mainly been known for pastries, which Mark touts as “unique to this valley.”</p>
+            <p> Mark “tried to make them attractive, delicious and at reasonable price,” he wrote in an email. “Some thought I was expensive, but when you consider the time and ingredients, I was always below where the price should be.”</p>
+            <p> Some time after opening, a “large food distributor” introduced the Grodkowskis to selling their products, including jellies, wholesale. From there, Sweetly Divine started having them at grocery stores and culinary retailers throughout Cache Valley.</p>                
+            <p> “I am hoping that my Jams and Jellies will become more popular and we can grow and be a part of people’s fridge or pantry,” Mark wrote.</p>
+            <p><i>Opsahl, K. (2021, March 26). Sweetly divine Owners REMINISCE as logan BAKERY prepares to close. Retrieved March 27, 2021, from <a href="https://www.hjnews.com/news/business/sweetly-divine-owners-reminisce-as-logan-bakery-prepares-to-close/article_b4eb3909-ee93-5f2e-abc1-f7d914e27e8e.html">https://www.hjnews.com/news/business/sweetly-divine-owners-reminisce-as-logan-bakery-prepares-to-close/article_b4eb3909-ee93-5f2e-abc1-f7d914e27e8e.html</a></i></p>
         </div>
     </main>
 

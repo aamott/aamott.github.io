@@ -11,7 +11,7 @@ function calcWindchill(temp, windSpeed) {
 window.addEventListener('load', (event) => {
     // Today's Weather Summary
     //TODO: Change City ID. Fish Haven not available from OpenWeatherMap API
-    const cityID = "5604473"; //Preston ID
+    const cityID = "5604473"; //Preston ID 
     const units = "imperial";
     const key = "352e0185b01df25e978724a23f97f5f6";
     const todayURL = "https://api.openweathermap.org/data/2.5/weather?id=" + cityID + "&units="+units+"&appid="+key;
@@ -23,11 +23,10 @@ window.addEventListener('load', (event) => {
            // Today's Summary
            const main = jsObject.main;
            const weather = jsObject.weather;
-           document.getElementById('current-temp').textContent = Math.round(main.temp);
            document.getElementById('condition').textContent = weather[0].description;
-           document.getElementById('high-temp').textContent = Math.round(main.temp_max);
-           document.getElementById('humidity').textContent = Math.round(main.humidity);
-           document.getElementById('wind-speed').textContent = Math.round(jsObject.wind.speed);
+           document.getElementById('high-temp').textContent = Math.round(main.temp_max) + " °F";
+           document.getElementById('humidity').textContent = Math.round(main.humidity) + '%';
+           document.getElementById('wind-speed').textContent = Math.round(jsObject.wind.speed) + " mph";
        });
     // Five Day Forecast
    const fiveDayURL = "https://api.openweathermap.org/data/2.5/forecast?id=" + cityID + "&units="+units+"&appid="+key;
@@ -44,7 +43,7 @@ window.addEventListener('load', (event) => {
 
                // Run once for every day
                let day = new Date(jsObject.list[i].dt_txt);
-               if ((day.getHours()+1) % 16 ==0) {// != prev_day.getDay()) {
+               if ((day.getHours()+1) % 19 ==0) { // 0 modulus anything is 0, so +1 makes it never 0
    
                    //daily forecast body
                    let forecastBody = document.createElement("section");
@@ -54,8 +53,6 @@ window.addEventListener('load', (event) => {
                    <img src="https://openweathermap.org/img/wn/${jsObject.list[i].weather[0].icon}.png" width=80px height=80px>
                    <p>${Math.round(jsObject.list[i].main.temp)} °F</p>
                    <p class="description">${jsObject.list[i].weather[0].description}</p>`;
-                   //                   
-
    
                    document.getElementById("forecast").append(forecastBody);
    
@@ -64,11 +61,12 @@ window.addEventListener('load', (event) => {
                }
            }
        })
-       .then(() => {
-           // Windchill
-           let temp = parseInt(document.getElementById("high-temp").innerText);
-           let windSpeed = parseInt(document.getElementById("wind-speed").innerText);
-           
-           document.getElementById("wind-chill").innerText = calcWindchill(temp, windSpeed) +  " °F";
-       })
+        .then(() => {
+            // Windchill
+            let temp = parseInt(document.getElementById("high-temp").innerText);
+            let windSpeed = parseInt(document.getElementById("wind-speed").innerText);
+            
+            let windChill = calcWindchill(temp, windSpeed)
+            document.getElementById("wind-chill").innerText = windChill + ((windChill == "N/A") ? "" : " °F");
+    })
 });
