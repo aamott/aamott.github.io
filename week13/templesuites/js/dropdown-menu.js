@@ -21,5 +21,5 @@ window.addEventListener('load', () => {
     }
 
     /* Add Featured Image */
-    let apiURL = "temples2json"
+    let apiURL = "https://github.com/aamott/aamott.github.io/tree/main/week13/templesuites/js";
 });
