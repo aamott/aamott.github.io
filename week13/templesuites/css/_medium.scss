@@ -1,0 +1,15 @@
+header {
+    #menu-icon {
+        display: none;
+    }
+    #navigation {
+        flex-flow: row;
+        justify-content: space-between;
+        li {
+            padding-right: 10px;
+        }
+    }
+}
+.responsive {
+    display: flex;
+}
