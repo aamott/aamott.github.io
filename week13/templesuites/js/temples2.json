@@ -9,7 +9,15 @@
         "imageurl":"https://assets.ldscdn.org/90/a0/90a0c0d599f94a2d955930e90fa95b9aa85a5004/idaho_falls_idaho_temple.png",
         "presidents":[
             "David Smith","William Killpack","Parley Arave","Cecil Hart","Delbert Groberg","Devere Harris","Rheim Jones","Milton Romrell","C. Gayle Williams","Preston Brimhall","Glen Nelson","Mark Ricks","Newell Richardson","John Groberg","Larry Stoddard","Gerald Mead","Donald Archibald","Doyle Batt"
-        ]
+        ],
+        "closures":[
+            "Monday, 12 April 2021 - Monday, 26 April 2021",
+            "Saturday, 24 July 2021",
+            "Monday, 23 August 2021 - Monday, 13 September 2021",
+            "Saturday, 2 October 2021",
+            "Wednesday, 24 November 2021 - Thursday, 25 November 2021",
+            "Friday, 24 December 2021 - Saturday, 25 December 2021",
+            "Friday, 31 December 2021 - Saturday, 1 January 2022"   ]
     },
 
     {
@@ -22,7 +30,15 @@
         "imageurl":"https://assets.ldscdn.org/29/8a/298a8b01fbc736923e83e7c748e60abcad8511c9/rexburg_idaho_temple.jpeg",
         "presidents":[
             "Val Christensen","Clair Thueson","Philip Wightman","Fenton Broadhead","Max Checketts"
-        ]
+        ],
+        "closures":[
+            "Monday, 12 April 2021 - Monday, 26 April 2021",
+            "Saturday, 24 July 2021",
+            "Monday, 23 August 2021 - Monday, 13 September 2021",
+            "Saturday, 2 October 2021",
+            "Wednesday, 24 November 2021 - Thursday, 25 November 2021",
+            "Friday, 24 December 2021 - Saturday, 25 December 2021",
+            "Friday, 31 December 2021 - Saturday, 1 January 2022"   ]
     } ,   
     {
         "name":"Kansas City Missouri Temple",
