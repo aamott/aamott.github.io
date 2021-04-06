@@ -1,73 +1,6 @@
-body {
-    font-family: 'Raleway', sans-serif;
-    margin: 0;
-}
-header {
-    font-family: 'Lora', serif;
-    color: hsl(220, 44%, 30%);
-    font-style: italic;
-    margin-bottom: 20px;
-    padding: 0 10px;
-    #top-background {
-        width: 100%;
-        height: 90px;
-        position: absolute;
-        top: 0;
-        left: 0;
-        // background: hsl(60, 94%, 97%);
-        // background: linear-gradient(180deg, hsl(60, 100%, 80%) 0%, rgba(255,255,255,1) 100%);
-        z-index: -1;
-    }
-    h3 {
-        font-size: 1.3em;
-    }
-    a, a:link, a:visited, a:hover, a:active {
-        text-decoration: none;
-        color:hsl(220, 44%, 30%);
-    }
-    section {
-        display: flex;
-        flex-flow: wrap;
-        margin: 0 auto;
-        max-width: 800px;
-        .logo {
-            display: flex;
-            flex-flow: row;
-            margin: 0 auto 0 0;
-            min-width: max-content;
-            img {
-                width: 30px;
-                margin: auto;
-                margin-right: 10px;
-            }
-        }
-        #menu-icon {
-            font-size: 2em;
-            margin: 15px 0 0;
-        }
-        .current {
-            text-decoration: underline;
-        }
-        ul { // #navigation
-            display: flex;
-            flex-flow: column;
-            padding-left: 0;
-            margin-top: 0;
-            text-align: center;
-            list-style-type: none;
-            width: 100%;
-            li {
-                padding-top: 15px;
-                font-size: 1.3em;
-            }
-        }
-    }
-}
-
 main {
     max-width: 1200px;
     margin: 0 auto;
-
 
     section {
         position: relative;
@@ -108,22 +41,10 @@ main {
             }
         }
     }
-   .contact {
-       background: rgba(224, 224, 224, 0.623);
-       padding: 5px 10px;
+   .contact-info {
+    //    background: rgba(224, 224, 224, 0.623);
+       padding: 5px 10px 5px 0;
        margin: 0;
        width: max-content;
    }
-}
-
-footer {
-    background-color: rgb(149, 149, 149);
-    padding: 5px;
-    p {
-        text-align: center;
-        margin: 0;
-    }
-}
-.responsive {
-    display: none;
 }

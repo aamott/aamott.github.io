@@ -1,31 +1,7 @@
-header {
-    #menu-icon {
-        display: none;
-    }
-    section {
-        // .logo {
-        //     margin-right: 10px;
-        // }
-        flex-wrap: nowrap;
-        #navigation {
-            flex-flow: row;
-            justify-content: space-between;
-            text-align: left;
-            margin: 8px 10px 10px 30px;
-            li {
-                padding-right: 10px;
-                font-size: 1.2em;
-            }
-        }
-    }
-}
 main {
     padding: 10px;
     img {
         max-height: 400px;
         object-fit: cover;
     }
-}
-.responsive {
-    display: flex;
 }

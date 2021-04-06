@@ -1,0 +1,14 @@
+main {
+    // display: grid;
+    // grid-template-columns: 1fr 1fr;
+    // grid-template-areas: "hero hero"
+    //                                 "left right";
+    // grid-gap: 10px;
+    #hero {
+        // grid-area: hero;
+    }
+    .lower {
+        grid-template-columns: 1fr 1fr;
+        
+    }
+}

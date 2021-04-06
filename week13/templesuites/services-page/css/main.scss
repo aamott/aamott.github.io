@@ -1,11 +1,11 @@
-@import "_frame";
+@import "../../css/frame";
 
-@import "small";
+@import "_small";
 
 @media only screen and (min-width: 760px) {
     @import "_medium";
 }
 
-@media only screen and (min-width: 900px) {
+@media only screen and (min-width: 1000px) {
     @import "_large";
 }
