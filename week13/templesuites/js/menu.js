@@ -5,7 +5,7 @@ window.addEventListener('load', () => {
 
     menubutton.addEventListener("click", ()=>{ mainnav.classList.toggle("responsive"); console.log("Menu click"); }, false);
 
-    window.onresize = () => { if (window.innerWidth > 760) mainnav.classList.remove("responsive"); }
+    window.onresize = () => { if (window.innerWidth > 760) mainnav.classList.remove("responsive"); if (window.innerWidth < 760) mainnav.classList.add("responsive");}
 
     /* Underline current page -- based on: https://stackoverflow.com/questions/6964503/using-javascript-to-highlight-current-page-in-navbar */
     let url = location.href.split("/");
@@ -19,7 +19,4 @@ window.addEventListener('load', () => {
             break;
         }
     }
-
-    /* Add Featured Image */
-    let apiURL = "https://github.com/aamott/aamott.github.io/tree/main/week13/templesuites/js";
 });

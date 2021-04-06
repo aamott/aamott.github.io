@@ -68,52 +68,8 @@ main {
     max-width: 1200px;
     margin: 0 auto;
 
-
-    section {
-        position: relative;
-        margin-bottom: 35px;
-        #hero {
-            margin-bottom: 0;
-            .description {
-                position: absolute;
-                bottom: 4px;
-                background:rgba(229, 245, 255, 0.623);
-                font-style: italic;
-                font-weight: 100;
-                width: 100%;
-                padding: 5px;
-            }
-        }
-        label {
-            background-color: rgb(202, 235, 255);
-            display: block;
-            p {
-                padding-bottom: 5px;
-                font-style: italic;
-                font-size: 0.8em;
-                margin-bottom: 0;
-            }
-        }
-        img {
-            width: 100%;
-            margin: 0 auto;
-        }
-        h3 {
-            margin: 15px auto 0 10px;
-        }
-        p {
-            margin: 5px 10px 0 10px;
-            a, a:link, a:visited, a:hover, a:active {
-                text-decoration: none;
-            }
-        }
-    }
-   .contact {
-       background: rgba(224, 224, 224, 0.623);
-       padding: 5px 10px;
-       margin: 0;
-       width: max-content;
-   }
+    display: grid;
+    grid-template-columns: auto;
 }
 
 footer {
