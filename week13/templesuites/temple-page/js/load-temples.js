@@ -1,5 +1,3 @@
-const key = "352e0185b01df25e978724a23f97f5f6";
-
 window.addEventListener('load', () => {
     /* Add Hero Image */
     let apiURL = "https://aamott.github.io/week13/templesuites/js/temples2.json";
@@ -11,7 +9,6 @@ window.addEventListener('load', () => {
 
         templeEls.forEach(section => {
             jsObject.forEach(temple => {
-
                 // get ID of each individual temple section
                 let templeId = temple.name.toLowerCase().replaceAll(" ", "-");
                 if (section.id == templeId) {
@@ -34,13 +31,15 @@ window.addEventListener('load', () => {
                     /******  Weather *********************/
                     // get and format temple closure dates
                     let weatherEl = document.createElement("section");
-                    let weatherOutput = "";
-                    let apiURL = `api.openweathermap.org/data/2.5/weather?q=${temple.weatherID}&units=imperial&appid=${key}`;
+                    const cityID = temple.weatherID;
+                    const key = "352e0185b01df25e978724a23f97f5f6";
+                    console.log(temple.weatherID);
+                    const apiURL = "https://api.openweathermap.org/data/2.5/weather?id=" + cityID + "&units=imperial&appid="+key;
                     
                     fetch(apiURL)
                     .then(response => response.json())
                     .then(jsObject => {
-                        console.log("TempleWeather: ", temple.name, jsObject);
+                        // console.log("TempleWeather: ", temple.name, jsObject);
              
                         // Today's Summary
                         const main = jsObject.main;
@@ -52,7 +51,7 @@ window.addEventListener('load', () => {
                         <p>${Math.round(jsObject.wind.speed)}mph winds</p>`
                         // add closures to temple
                         section.getElementsByClassName("weather-summary")[0].appendChild(weatherEl);
-                        console.log(weatherEl)
+                        // console.log(weatherEl)
                     });
 
                 }

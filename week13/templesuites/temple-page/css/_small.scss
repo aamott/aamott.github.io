@@ -28,8 +28,15 @@ main {
                 margin-left: 10px;
             }
         }
-        .weather {
-            background-color: hsl(200, 60%, 47%);
+        .weather-summary {
+            background-color: hsl(199, 100%, 87%);
+            border-radius: 40px;
+            padding: 20px;
+            width: 100%;
+            max-width: 300px;
+            p {
+                margin: 6px;
+            }
         }
     } // end section.temple
 }
