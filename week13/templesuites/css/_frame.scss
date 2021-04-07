@@ -4,9 +4,11 @@ body {
     font-family: 'Raleway', sans-serif;
     margin: 0;
     
-    a, a:link, a:visited, a:hover, a:active {
-        text-decoration: none;
-        color:hsl(220, 44%, 30%);
+    main {
+        a, a:link, a:visited, a:hover, a:active {
+            text-decoration: none;
+            color:hsl(220, 44%, 30%);
+        }
     }
 }
 * {
@@ -74,6 +76,10 @@ header {
                 font-size: 1.3em;
                 background: rgb(33,141,190);
                 width: 100%;
+                color: white;
+                a:hover, a:active {
+                      text-decoration: underline;
+                }
             }
         }
     }
