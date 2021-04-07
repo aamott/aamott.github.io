@@ -2,10 +2,10 @@
 
 @import "_small";
 
-@media only screen and (min-width: 760px) {
+@media only screen and (min-width: 600px) {
     @import "_medium";
 }
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 900px) {
     @import "_large";
 }

@@ -17,33 +17,42 @@ main {
     }
     .lower {
         display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
+        grid-template-columns: auto;
+        grid-template-rows: repeat(auto-fit, min-content);
         grid-gap: 20px;
         section {
-            padding: 0 10px;
             width: 100%;
             background-color: hsl(199, 100%, 87%);
             border-radius: 10px;
-            
+            margin-bottom: 20px;
+            height: min-content;
             img {
                 width: 100%;
                 object-fit: cover;
                 height: 55%;
+                margin-bottom: -4px;
             }
-            h3 {
-                margin-bottom: 0;
+            h2 {
+                background-color: hsl(200, 60%, 47%);
+                padding: 10px;
+                color: white;
+                margin: 0;
+                margin-bottom: 5px;
             }
             p {
-                margin: 0;
+                margin: 5px 10px;
+            }
+            ul {
+                margin-top: 0;
+                margin-bottom: 5px;
+                // padding: 0;
             }
 
             form {
                 padding: 0 10px;
                 width: 100%;
                 margin-bottom: 20px;
-                // background-color: hsl(199, 100%, 87%);
-                
+
                 fieldset {
                     margin: 1.5em 0;
                     border: 1px solid rgb(56, 56, 56);
@@ -57,7 +66,7 @@ main {
                 label, div {
                     display: block;
                     padding-top: 1em;
-                    color: hsl(10, 66%, 14%);
+                    color: hsl(19, 100%, 37%);
                     font-weight: bold;
                     input, select {
                         display: block;
@@ -68,18 +77,22 @@ main {
                         max-width: 20rem;
                     }
                 }
-                div.radio {
-                    input, label  { // individual radio buttons
-                        display: inline;
-                        width: max-content;
-                        color:rgb(20, 20, 20);
-                        font-weight: normal;
-                    }
-                } // end div.radio
                 textarea {
                     display: block;
+                    width: 100%;
+                    max-width: 20rem;
+                }
+                .submit {
+                    background-color: hsla(4, 55%, 55%, 0.781);
+                    color: white;
+                    font-weight: bold;
+                    font-size: 1em;
+                    padding: 10px;
+                    border-radius: 10px;
+                    width: 100%;
+                    max-width: 21rem;
                 }
             } // end form
-        }
-    }
-}
+        } // end section
+    } // end .lower
+} // end main

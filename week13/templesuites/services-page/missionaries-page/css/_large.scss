@@ -1,14 +1,12 @@
 main {
-    // display: grid;
-    // grid-template-columns: 1fr 1fr;
-    // grid-template-areas: "hero hero"
-    //                                 "left right";
-    // grid-gap: 10px;
-    #hero {
-        // grid-area: hero;
-    }
     .lower {
         grid-template-columns: 1fr 1fr;
-        
+        grid-template-rows: min-content min-content;
+        section {
+            height: 100%;
+        }
+        section.form {
+            grid-column: span 2;
+        }
     }
 }
