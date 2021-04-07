@@ -45,10 +45,13 @@ window.addEventListener('load', () => {
                         const main = jsObject.main;
                         const weather = jsObject.weather;
                         weatherEl.innerHTML = 
-                        `<p>${weather[0].description}</p>
-                        <p>${Math.round(main.temp_max)} °F</p>
-                        <p>${Math.round(main.humidity)}% humidity</p>
-                        <p>${Math.round(jsObject.wind.speed)}mph winds</p>`
+                        `<h4>Current Conditions</h4>
+                        <ul>
+                            <li>${weather[0].description}</li>
+                            <li>${Math.round(main.temp_max)} °F</li>
+                            <li>${Math.round(main.humidity)}% humidity</li>
+                            <li>${Math.round(jsObject.wind.speed)}mph winds</li>
+                        </ul>`
                         // add closures to temple
                         section.getElementsByClassName("weather-summary")[0].appendChild(weatherEl);
                         // console.log(weatherEl)
