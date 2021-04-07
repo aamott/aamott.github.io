@@ -1,3 +1,5 @@
+const key = "352e0185b01df25e978724a23f97f5f6";
+
 window.addEventListener('load', () => {
     /* Add Hero Image */
     let apiURL = "https://aamott.github.io/week13/templesuites/js/temples2.json";
@@ -14,6 +16,7 @@ window.addEventListener('load', () => {
                 let templeId = temple.name.toLowerCase().replaceAll(" ", "-");
                 if (section.id == templeId) {
 
+                    /******  Closures *********************/
                     // get and format temple closure dates
                     let closuresEl = document.createElement("section");
                     let closureOutput = "";
@@ -27,7 +30,31 @@ window.addEventListener('load', () => {
 
                     // add closures to temple
                     section.getElementsByClassName("closure-schedule")[0].appendChild(closuresEl);
-                    console.log(closuresEl)
+
+                    /******  Weather *********************/
+                    // get and format temple closure dates
+                    let weatherEl = document.createElement("section");
+                    let weatherOutput = "";
+                    let apiURL = `api.openweathermap.org/data/2.5/weather?q=${temple.weatherID}&units=imperial&appid=${key}`;
+                    
+                    fetch(apiURL)
+                    .then(response => response.json())
+                    .then(jsObject => {
+                        console.log("TempleWeather: ", temple.name, jsObject);
+             
+                        // Today's Summary
+                        const main = jsObject.main;
+                        const weather = jsObject.weather;
+                        weatherEl.innerHTML = 
+                        `<p>${weather[0].description}</p>
+                        <p>${Math.round(main.temp_max)} °F</p>
+                        <p>${Math.round(main.humidity)}% humidity</p>
+                        <p>${Math.round(jsObject.wind.speed)}mph winds</p>`
+                        // add closures to temple
+                        section.getElementsByClassName("weather-summary")[0].appendChild(weatherEl);
+                        console.log(weatherEl)
+                    });
+
                 }
             });
         })
