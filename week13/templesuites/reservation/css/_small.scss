@@ -66,6 +66,18 @@ main {
             } // end div.radio
             textarea {
                 display: block;
+                width: 100%;
+                max-width: 20rem;
+            }
+            .submit {
+                background-color: hsla(4, 55%, 55%, 0.781);
+                color: white;
+                font-weight: bold;
+                font-size: 1em;
+                padding: 10px;
+                border-radius: 10px;
+                width: 100%;
+                max-width: 21rem;
             }
         } // end form
     }
