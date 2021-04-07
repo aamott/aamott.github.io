@@ -26,48 +26,35 @@
                 <li><a href="../temple-page/temple.htm">Temple</a></li>
                 <li><a href="../reservation/reservation.htm">Reservation</a></li>
                 <li><a href="../services-page/services.htm">Services</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="../contact/contact.htm">Contact</a></li>
             </ul>
         </section>
     </header>
 
     <main id="templeDisplay">
-        <section id="idaho-falls-temple" class="temple">
-            <img src="https://assets.ldscdn.org/90/a0/90a0c0d599f94a2d955930e90fa95b9aa85a5004/idaho_falls_idaho_temple.png" alt="Idaho Falls Temple">
+        <section>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3101.4048370285545!2d-77.09772048440904!3d38.98325594948323!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7c97b6b8f21f1%3A0x9a0b3cde14da0a60!2s4800%20Montgomery%20Ln%20%23300%2C%20Bethesda%2C%20MD%2020814!5e0!3m2!1sen!2sus!4v1617774954325!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             
-            <h3>Idaho Falls Temple</h3>
-            <div class="content">
-                <h4>Contact</h4>
-                <p>Address: 1000 Memorial Dr., Idaho Falls, ID</p>
-                <p>Phone Number: 208-522-7559</p>
-                <p>Email: templeinn.idahofalls@templeinn.com</p>
-                
-                <div class="details">
-                    <h4>Services</h4>
-                        <p>Clothing rental available</p>
-                        <p>No cafeteria available</p>
-                        <p>No patron housing available</p>
-                        <p>Distribution center nearby</p>
-                    <h4>History</h4>
-                    <ul>
-                        <li>3 March 1937 — Announced</li>
-                        <li>19 December 1939 — Groundbreaking</li>
-                        <li>23 September 1945 — Dedicated</li>
-                        <li>4 June 2017 — Rededicated</li>
-                    </ul>
-                    <h4>Ordinance Schedule</h4>
-                        <p>Currently open to live ordinances only due to COVID-19</p>
-                    <h4>Session Schedule</h4>
-                        <p>Currently open to live ordinances only due to COVID-19</p>
-                    <div class="closure-schedule"></div>
-                    <div class="weather-summary"></div>
-                </div>
-            </div>
+            <h3>Headquarters</h3>
+                <p>4800 Montgomery Ln #300, Bethesda, MD 20814</p>
         </section> 
 
-        <!-- <section id="rexburg-idaho-temple" class="temple">
+        <section>
+            <form method="get" action="thanks.htm">
+                <h3>Contact Us</h3>
+                <fieldset>
+                    <legend>Your Contact Information</legend>
+                    <label>First Name*<input type="text" name="fname" required></label>
+                    <label>Last Name*<input type="text" name="lname" required></label>
+                    <label>Phone<input type="tel" name="phone" placeholder="1234448899"></label>
+                    <label>Email*<input type="email" name="email" placeholder="someone@gmail.com" required></label>
+                    <label>Home State or Country<input type="text" name="homeState" placeholder="Kansas"></label>
+                    <label>Comments<textarea name="comments"></textarea></label>
+                </fieldset>
+                <input type="submit" value="Submit Reservation" class="submit">
+            </form>
+        </section>
 
-        </section> -->
     </main>
 
     <footer>

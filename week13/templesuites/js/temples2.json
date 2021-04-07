@@ -50,7 +50,13 @@
         "imageurl":"https://assets.ldscdn.org/62/5e/625e0629b625e2596ad1c160a45f567f207560cc/kansas_city_temple_lds.jpg",
         "presidents":[
             "John Hardy","Dennis Karpowitz","Wayne Miller","R. Scott Holman"
-        ]
+        ],
+        "closures":[
+            "Monday, 12 July 2021 - Monday, 23 August 2021",
+            "Saturday, 2 October 2021",
+            "Thursday, 25 November 2021",
+            "Friday, 24 December 2021 - Saturday, 25 December 2021",
+            "Friday, 31 December 2021 (Limited Operations)"   ]
     },
 
     {
@@ -63,6 +69,9 @@
         "imageurl":"https://assets.ldscdn.org/75/2c/752cf0dcfabe1870442460d13a2eeb8bda6267a2/oklahoma_city_temple_exterior.jpeg",
         "presidents":[
             "Henry Chesney","H. Aldridge Gillespie","Michael Southward","Don Hansen","Travis Campbell","Kent Bowman"
-        ]
+        ],
+        "closures":[
+            "Saturday, 2 October 2021 - Monday, 4 October 2021",
+            "Monday, 6 December 2021 - Monday, 20 December 2021"   ]
     } 
 ]

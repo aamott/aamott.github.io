@@ -28,9 +28,10 @@ main {
                 margin-top: 0;
                 margin-left: 10px;
             }
-            div.details {
-                display: none;
-            }
+            // div.details {
+            //     position: absolute;
+            //     visibility: hidden;
+            // }
         }
     } // end section.temple
 
@@ -41,7 +42,7 @@ main {
 
     section.temple:hover {
         div.details {
-            display:inherit;
+            visibility:inherit;
             animation-name: example;
             animation-duration: 2s;
         }
