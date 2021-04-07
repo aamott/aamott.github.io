@@ -4,27 +4,29 @@ window.addEventListener('load', () => {
     fetch(apiURL)
     .then(response => response.json())
     .then(jsObject => {
+        // get a list of temple sections
         let templeEls = document.getElementById("templeDisplay").childNodes;
-        // TODO: Get temple closure schedule from JSON
+
         templeEls.forEach(section => {
             jsObject.forEach(temple => {
+
+                // get ID of each individual temple section
                 let templeId = temple.name.toLowerCase().replaceAll(" ", "-");
                 if (section.id == templeId) {
 
-                    // get and format closures
+                    // get and format temple closure dates
                     let closuresEl = document.createElement("section");
-                    
                     let closureOutput = "";
                     temple.closures.forEach(closure => {
-                        closureOutput += `<p>${closure}</p>`;
+                        closureOutput += `<li>${closure}</li>`;
                     })
 
                     closuresEl.innerHTML = `
                         <h4>Temple Closure Schedule</h4>
-                        ${closureOutput}`;
+                        <ul>${closureOutput}</ul>`;
 
                     // add closures to temple
-                    section.appendChild(closuresEl);
+                    section.getElementsByClassName("closure-schedule")[0].appendChild(closuresEl);
                     console.log(closuresEl)
                 }
             });

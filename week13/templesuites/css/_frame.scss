@@ -1,6 +1,11 @@
 body {
     font-family: 'Raleway', sans-serif;
     margin: 0;
+    
+    a, a:link, a:visited, a:hover, a:active {
+        text-decoration: none;
+        color:hsl(220, 44%, 30%);
+    }
 }
 * {
     box-sizing: border-box;
@@ -11,7 +16,9 @@ header {
     font-style: italic;
     margin-bottom: 20px;
     padding: 0 10px;
-    background-color: hsl(199, 96%, 81%);
+    background: rgb(33,141,190);
+    background: linear-gradient(180deg, rgba(33,141,190,1) 95%, rgba(221,125,118,1) 95%);
+    color: white;
     #top-background {
         width: 100%;
         height: 90px;
@@ -20,14 +27,10 @@ header {
         left: 0;
         z-index: -1;
     }
-    .icon {
-        background-color: hsl(0, 0%, 100%);
-        padding: 5px;
-        border: 2px solid black;
-        border-radius: 5px;
-    }
+    
     h3 {
-        font-size: 1.3em;
+        font-size: 1.8em;
+        margin: 15px 0;
     }
     a, a:link, a:visited, a:hover, a:active {
         text-decoration: none;
@@ -43,15 +46,23 @@ header {
             flex-flow: row;
             margin: 0 auto 0 0;
             min-width: max-content;
+            color: white;
             img {
                 width: 30px;
                 margin: auto;
                 margin-right: 10px;
             }
+            .icon {
+                background-color: hsl(0, 0%, 100%);
+                padding: 5px;
+                border: 2px solid black;
+                border-radius: 5px;
+            }
         }
+        
         #menu-icon {
-            font-size: 2em;
-            margin: 15px 0 0;
+            font-size: 2.5em;
+            margin: auto 0;
         }
         .current {
             text-decoration: underline;
@@ -67,6 +78,8 @@ header {
             li {
                 padding-top: 15px;
                 font-size: 1.3em;
+                background: rgb(33,141,190);
+                width: 100%;
             }
         }
     }

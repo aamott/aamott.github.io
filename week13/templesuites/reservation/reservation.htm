@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lora&family=Raleway&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="../js/menu.js"></script>
+    <script src="js/load-locations.js"></script>
+    <title>Temple Inn &amp; suites | Services</title>
+</head>
+<body>
+    <header>
+        <div id="top-background"></div>
+        <section>
+            <div class="logo">
+                <img class="icon" src="../images/templeIcon.png" alt="Temple Inn & Suites">
+                <h3>Temple Inn &amp; Suites</h3>
+            </div>
+
+            <p id="menu-icon"><a href="#">&Congruent;</a></p>
+            <ul id="navigation" class="responsive">
+                <li><a href="../index.htm">Home</a></li>
+                <li><a href="../temple-page/temple.htm">Temple</a></li>
+                <li><a href="../reservation/reservation.htm">Reservation</a></li>
+                <li><a href="../services-page/services.htm">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </section>
+    </header>
+
+    <main>
+        <div id="hero">
+            <picture>
+                <source media="(min-width: 800px)" srcset="../images/temples/reception-room-small.jpg">
+                <source media="(min-width: 1280px)" srcset="../images/temples/reception-room-medium.jpg">
+                <img src="../images/temples/reception-room-medium.jpg">
+            </picture>
+            <h1>Services</h1>
+        </div>
+
+        <div class="lower">
+            <form method="get" action="thanks.htm">
+                <fieldset>
+                    <legend>Registrant Information</legend>
+                    <label>First Name*<input type="text" name="fname" required></label>
+                    <label>Last Name*<input type="text" name="lname" required></label>
+                    <label>Phone<input type="tel" name="phone" placeholder="1234448899"></label>
+                    <label>Email*<input type="email" name="email" placeholder="someone@gmail.com" required></label>
+                    <label>Home State or Country<input type="text" name="homeState" placeholder="Kansas"></label>
+                    <label>Special Accommodations or Comments<textarea name="comments"></textarea></label>
+                </fieldset>
+                <fieldset>
+                    <legend>Hotel Information</legend>
+                    <label>Location*
+                        <select name="location" id="location"> 
+                            <!-- Options inserted by load-locations.js -->
+                        </select>
+                    </label>
+
+                    <label>Start Date*<input type="date" name="startDate" required></label>
+                    <label>End Date*<input type="date" name="endDate" required></label>
+                    
+                    <label>Number of Rooms*<input type="number" name="numberRooms" value='2' max="3"></label>
+                    
+                    <div>Room Type*</div>
+                    <div class="radio">
+                        <label><input type="radio" name="roomType" value="small">Small</label>
+                        <label><input type="radio" name="roomType" value="medium">Medium</label>
+                        <label><input type="radio" name="roomType" value="large">Large</label>
+                    </div>
+                </fieldset>
+                <input type="submit" value="Submit Reservation" class="submit">
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>Copyright &copy; Adam Amott | BYU - Idaho</p>
+    </footer>
+</body>
+</html>

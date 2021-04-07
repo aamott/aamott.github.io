@@ -5,7 +5,7 @@ main {
     //                                 "left right";
     // grid-gap: 10px;
     #hero {
-        grid-area:hero;
+        // grid-area: hero;
     }
     .lower {
         grid-template-columns: 1fr 1fr;

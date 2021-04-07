@@ -7,7 +7,7 @@ window.addEventListener('load', () => {
     .then(jsObject => {
         console.log(jsObject);
 
-        featuredEl = document.getElementById("hero");
+        featuredEl = document.getElementById("hero-img");
         featuredIm = document.createElement("img");
 
         // Choose random featured temple
@@ -18,7 +18,8 @@ window.addEventListener('load', () => {
         description.classList.add("description");
         description.innerHTML = `
                         <p>The current president of the ${temple.name} is ${temple.presidents[temple.presidents.length - 1]}.<br>
-                        This building stands at ${temple.address1}, ${temple.city} ${temple.state}</p>`;
+                        This building stands at ${temple.address1}, ${temple.city} ${temple.state}</p>
+                        <a href="reservation/reservation.htm">Make a reservation nearby</a>`;
         
         featuredEl.insertBefore(description, featuredEl.firstChild);
         featuredEl.insertBefore(featuredIm, description);
