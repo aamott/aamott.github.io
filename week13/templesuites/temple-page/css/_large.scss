@@ -4,14 +4,8 @@ main {
     grid-template-areas: "hero hero"
                                     "left right";
     grid-gap: 10px;
-    #top {
-        grid-area:hero;
-    }
-    #bottom-l {
-        grid-area: left;
-        width: 100%;
-    }
-    #bottom-r {
-        width: 100%;
+    img {
+        object-fit: cover;
+        height: 390px; 
     }
 }
