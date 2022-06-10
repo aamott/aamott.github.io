@@ -1,0 +1,137 @@
+// import the normalize.css file
+
+// variables
+:root {
+    // colors
+    --color-primary: hsl(195, 100%, 42%);
+    --color-secondary: hsl(0, 0%, 98%);
+    --color-tertiary: hsl(217, 100%, 21%);
+    --font-color: hsl(0, 0%, 96%);
+
+    // Fonts
+    --font-primary: 'Roboto', sans-serif;
+
+    // spacing
+    --nav-height: 60px;
+    --hero-height: calc(100vh * 0.2);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+// nav and status sit on the top of the page
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--nav-height);
+    background-color: var(--color-tertiary);
+    z-index: 1;
+
+    display: grid;
+    grid-template-columns: 30% 50%;
+    gap: 20%;
+    grid-template-rows: 100%;
+    align-items: center;
+
+    .name-box {
+        display: flex;
+        // align-items: center;
+        // justify-content: center;
+        height: 100%;
+        align-items: center;
+        // width: 100%;
+        gap: 20px;
+        padding: 10px;
+
+        h3 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--font-color);
+            min-width: max-content;
+        }
+    }
+
+    .icons {
+        filter:invert(100%);
+        display: flex;
+        gap: 10px;
+        height: 100%;
+    }
+
+    ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 2rem;
+        height: 100%;
+        width: 100%; // TODO: come back
+        gap: 20px;
+
+        li {
+            list-style: none;
+            text-decoration: none;
+            min-width: max-content;
+
+            a {
+                color: var(--color-secondary);
+                font-size: 1.5rem;
+                font-weight: bold;
+                text-transform: uppercase;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+
+// hero sits right below the nav
+.hero {
+    padding: 50px 0;
+    position: relative;
+    top: var(--nav-height);
+    width: 100%;
+    height: var(--hero-height) +300px;
+    background-color: var(--color-primary);
+    z-index: 0;
+
+    // display: grid; // use this to cover background if h1 is not inline
+    text-align: center;
+
+    h1 {
+        display: inline;
+        font-size: 5em;
+        color: var(--font-color)
+    }
+}
+
+
+// main content sits in the middle of the page, below the nav and hero
+main {
+    position: relative;
+    // top: calc(var(--nav-height) + var(--hero-height) * 2);
+    width: 100%;
+    // height: calc(100vh - 60px);
+    background-color: var(--color-secondary);
+    z-index: 0;
+}
+
+
+
+// footer sits at the bottom of the page
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: var(--color-primary);
+    z-index: 1;
+}
