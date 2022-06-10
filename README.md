@@ -1,3 +1,2 @@
 # aamott.github.io
-WDD 230 Pages
-This page is used to keep track of assignments in the Web Dev 230 class.
+My portfolio: a place to demonstrate my work and document my projects.
