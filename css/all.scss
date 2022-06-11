@@ -3,9 +3,9 @@
 // variables
 :root {
     // colors
-    --color-primary: hsl(195, 100%, 42%);
+    --color-primary: hsl(124, 46%, 51%);
     --color-secondary: hsl(0, 0%, 98%);
-    --color-tertiary: hsl(217, 100%, 21%);
+    --color-tertiary: hsl(229, 94%, 58%);
     --font-color: hsl(0, 0%, 96%);
 
     // Fonts
@@ -13,7 +13,7 @@
 
     // spacing
     --nav-height: 60px;
-    --hero-height: calc(100vh * 0.2);
+    --hero-height: 2px;
 }
 
 * {
@@ -41,18 +41,18 @@ nav {
     grid-template-rows: 100%;
     align-items: center;
 
+    border-bottom: 5px solid var(--color-primary);
+
     .name-box {
         display: flex;
-        // align-items: center;
-        // justify-content: center;
         height: 100%;
         align-items: center;
-        // width: 100%;
         gap: 20px;
         padding: 10px;
+        padding-left: 30px;
 
         h3 {
-            font-size: 1.5rem;
+            font-size: 1.9rem;
             font-weight: bold;
             color: var(--font-color);
             min-width: max-content;
@@ -64,6 +64,11 @@ nav {
         display: flex;
         gap: 10px;
         height: 100%;
+
+        img {
+            height: 100%;
+            width: 100%;
+        }
     }
 
     ul {
@@ -93,24 +98,28 @@ nav {
 
 
 // hero sits right below the nav
-.hero {
-    padding: 50px 0;
-    position: relative;
-    top: var(--nav-height);
-    width: 100%;
-    height: var(--hero-height) +300px;
-    background-color: var(--color-primary);
-    z-index: 0;
+// .hero {
+//     padding: 30px 0;
+//     position: relative;
+//     top: var(--nav-height);
+//     width: 100%;
+//     height: var(--hero-height);
+//     background-color: var(--color-primary);
+//     z-index: 0;
 
-    // display: grid; // use this to cover background if h1 is not inline
-    text-align: center;
+//     // display: grid; // use this to cover background if h1 is not inline
+//     // text-align: center;
 
-    h1 {
-        display: inline;
-        font-size: 5em;
-        color: var(--font-color)
-    }
-}
+//     h1 {
+//         display: inline;
+//         font-size: 2em;
+//         color: var(--font-color)
+//     }
+//     h2 {
+//         font-size: 1.5em;
+//         color: var(--font-color)
+//     }
+// }
 
 
 // main content sits in the middle of the page, below the nav and hero
@@ -121,17 +130,18 @@ main {
     // height: calc(100vh - 60px);
     background-color: var(--color-secondary);
     z-index: 0;
+    padding: 30px;
 }
-
 
 
 // footer sits at the bottom of the page
 footer {
-    position: fixed;
+    // position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 60px;
+    height: 40px;
     background-color: var(--color-primary);
     z-index: 1;
+    text-align: center;
 }
