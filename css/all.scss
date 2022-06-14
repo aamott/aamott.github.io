@@ -14,6 +14,7 @@
     // spacing
     --nav-height: 60px;
     --hero-height: 2px;
+    --footer-height: 40px;
 }
 
 * {
@@ -82,7 +83,7 @@ nav {
         align-items: center;
         padding: 0 2rem;
         height: 100%;
-        width: 100%; // TODO: come back
+        width: 100%;
         gap: 20px;
 
         li {
@@ -129,24 +130,34 @@ nav {
 
 // main content sits in the middle of the page, below the nav and hero
 main {
+    margin-top: var(--nav-height);
     position: relative;
     width: 100%;
-    // background-color: var(--color-secondary);
+    
+    // keep the footer at the bottom of the page and fill the rest of the page
+    min-height: calc(100vh - var(--nav-height) - var(--footer-height));
+
     background: rgb(128, 128, 128);
     background: linear-gradient(119deg, hsla(0, 0%, 50%, 0.5) 54%, hsla(124, 46%, 51%, 0.499) 81%);
     z-index: 0;
     padding: 30px;
+    margin-bottom: 0;
+    
 }
 
 
 // footer sits at the bottom of the page
 footer {
-    // position: fixed;
+    // keep the paragraph from pushing main up instead of itself down. overflow: hidden; would work too.
+    display: flow-root;
+
+    // stay at the bottom of the page
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 40px;
+    height: var(--footer-height);
+
     background-color: var(--color-primary);
-    z-index: 1;
     text-align: center;
+    margin:0;
 }
