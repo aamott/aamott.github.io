@@ -131,7 +131,9 @@ nav {
 main {
     position: relative;
     width: 100%;
-    background-color: var(--color-secondary);
+    // background-color: var(--color-secondary);
+    background: rgb(128, 128, 128);
+    background: linear-gradient(119deg, hsla(0, 0%, 50%, 0.5) 54%, hsla(124, 46%, 51%, 0.499) 81%);
     z-index: 0;
     padding: 30px;
 }
