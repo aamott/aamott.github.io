@@ -1,15 +1,15 @@
-// import the normalize.css file
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz@8..144&display=swap');
 
 // variables
 :root {
     // colors
     --color-primary: hsl(124, 46%, 51%);
     --color-secondary: hsl(0, 0%, 98%);
-    --color-tertiary: hsl(229, 94%, 58%);
+    --color-tertiary: hsl(197, 78%, 49%);
     --font-color: hsl(0, 0%, 96%);
 
     // Fonts
-    --font-primary: 'Roboto', sans-serif;
+    --font-primary: 'Roboto Flex', Arial, sans-serif;
 
     // spacing
     --nav-height: 60px;
@@ -18,11 +18,16 @@
 
 * {
     box-sizing: border-box;
+    font-family: var(--font-primary);
 }
 
 body {
     margin: 0;
     padding: 0;
+    font-family: var(--font-primary);
+    h1 {
+        
+    }
 }
 
 // nav and status sit on the top of the page
@@ -125,9 +130,7 @@ nav {
 // main content sits in the middle of the page, below the nav and hero
 main {
     position: relative;
-    // top: calc(var(--nav-height) + var(--hero-height) * 2);
     width: 100%;
-    // height: calc(100vh - 60px);
     background-color: var(--color-secondary);
     z-index: 0;
     padding: 30px;

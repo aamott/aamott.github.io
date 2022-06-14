@@ -1,0 +1,32 @@
+@import 'all.scss';
+
+main {
+
+    #intro {
+        margin-top: 250px;
+        max-width: 600px;
+        margin-bottom: 200px;
+        h1 {
+            font-size: 3em;
+            margin-top: 0;
+            margin-bottom: 0;
+
+            // max-width: max-content;
+
+        }
+        p {
+            font-size: 1.3em;
+            margin-top: 0;
+            margin-bottom: 0;
+            border-top: 5px solid hsl(0, 0%, 50%);
+            padding-top: 10px;
+        }
+    }
+
+    .contact-me {
+        background-color: rgb(255, 95, 37);
+        padding: 30px;
+        font-size: 2em;
+        color: white;
+    }
+}
