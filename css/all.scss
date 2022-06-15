@@ -26,9 +26,6 @@ body {
     margin: 0;
     padding: 0;
     font-family: var(--font-primary);
-    h1 {
-        
-    }
 }
 
 // nav and status sit on the top of the page
@@ -142,7 +139,27 @@ main {
     z-index: 0;
     padding: 30px;
     margin-bottom: 0;
+
+    overflow: hidden;
     
+    // header zoom animation
+    h1, h2 {
+        transform: scale(0.94);
+        animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
+    }
+
+    @keyframes scale {
+        100% {
+            transform: scale(1);
+        }
+    }
+
+    @keyframes fade-in {
+        100% {
+            opacity: 1;
+            filter: blur(0);
+        }
+    }
 }
 
 

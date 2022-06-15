@@ -1,4 +1,5 @@
 @import 'all.scss';
+@import 'skill-list.scss';
 
 :root {
     // colors
@@ -9,24 +10,10 @@
 }
 
 main {
-    h1 {
-        transform: scale(0.94);
-        animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
-    }
-    @keyframes scale {
-        100% {
-            transform: scale(1);
-        }
-    }
-    @keyframes fade-in {
-        100% {
-            opacity: 1;
-            filter: blur(0);
-        }
-    }
 
     #intro {
-        height: calc(100vh);
+        display: flow-root; // keep intro from pushing content down further than necessary
+        height: calc(100vh - var(--nav-height) - var(--footer-height));
         max-width: 600px;
         div {
             margin-top: calc(100vh / 4);
@@ -34,7 +21,6 @@ main {
                 font-size: 4.9em;
                 margin-top: 0;
                 margin-bottom: 0;
-    
             }
             p {
                 font-size: 1.3em;
@@ -55,16 +41,6 @@ main {
             border:1px solid hsl(0, 0%, 50%);
         }
     }
-
-    .skills {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        grid-gap: 20px;
-        margin-top: 50px;
-        margin-bottom: 50px;
-        padding: 20px;
-    }
-
 }
 
 #background-nerd {

@@ -10,7 +10,6 @@ setup_nav_from_file = function() {
             temp_container.innerHTML = html;
             // navEl = temp_container.firstChild;
             navEl = temp_container.querySelector('nav');
-            console.log(navEl);
 
             // get the body
             const body = document.querySelector('body');
