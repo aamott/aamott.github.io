@@ -1,11 +1,11 @@
 const technical_skills = [
     {
         name: "Python",
-        level: 60
+        level: 90
     },
     {
         name: "C++",
-        level: 40
+        level: 80
     },
     {
         name: "HTML",
@@ -13,52 +13,52 @@ const technical_skills = [
     },
     {
         name: "CSS",
-        level: 60
-    },
-    {
-        name: "JavaScript",
         level: 50
     },
     {
+        name: "JavaScript",
+        level: 80
+    },
+    {
         name: "PHP",
-        level: 30
+        level: 40
     },
     {
         name: "C#",
-        level: 40
+        level: 80
     }
 ];
 
-const people_skills = [
-    {
-        name: "Communication",
-        level: 60
-    },
-    {
-        name: "Teamwork",
-        level: 60
-    },
-    {
-        name: "Problem solving",
-        level: 60
-    },
-    {
-        name: "Adaptability",
-        level: 60
-    },
-    {
-        name: "Time management",
-        level: 60
-    },
-    {
-        name: "Nunchuk",
-        level: 1
-    },
-    {
-        name: "Awesomeness",
-        level: 300
-    }
-];
+// const people_skills = [
+//     {
+//         name: "Communication",
+//         level: null
+//     },
+//     {
+//         name: "Teamwork",
+//         level: null
+//     },
+//     {
+//         name: "Problem solving",
+//         level: null
+//     },
+//     {
+//         name: "Adaptability",
+//         level: null
+//     },
+//     {
+//         name: "Time management",
+//         level: null
+//     },
+//     {
+//         name: "Nunchuk",
+//         level: 1
+//     },
+//     {
+//         name: "Awesomeness",
+//         level: 300
+//     }
+// ];
 
 
 function build_skills_el(skills, skills_el) {
@@ -105,6 +105,6 @@ window.addEventListener("load", () => {
     let skills_el = document.getElementById( "technical-skills-container" );
     build_skills_el(technical_skills, skills_el);
 
-    let people_skills_el = document.getElementById( "people-skills-container" );
-    build_skills_el(people_skills, people_skills_el);
+    // let people_skills_el = document.getElementById( "people-skills-container" );
+    // build_skills_el(people_skills, people_skills_el);
 });

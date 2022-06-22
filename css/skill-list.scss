@@ -2,16 +2,15 @@
 main {
     .skill-list {
         display: grid;
-        // grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
         grid-gap: 20px;
         margin-top: 50px;
         margin-bottom: 50px;
+        margin-left: 15px;
         padding: 20px;
 
         border: 2px hsla(0, 0%, 0%, 0.632) solid;
         border-radius: 10px;
 
-        margin-left: 15px;
         overflow: hidden;
 
         // create a list of skills with a bar on the bottom to represent the level of skill
@@ -23,10 +22,38 @@ main {
                 // width: 80%;
                 height: 10px;
                 background-color: rgb(247, 118, 4);
+                border: hsla(0, 0%, 0%, 0.632) solid 1px;
+                border-radius: 10px;
             }
-            // Change the color of the skill level bar based on the level of skill
         }
-            
+
+        // Change the color of the skill level bar based on the level of skill
+        // TODO: Change this color to a javascript color, referencing css variables or detecting dark mode.
+        li:nth-child(1) .skill-level {
+            background-color: red;
+        }
+        li:nth-child(2) .skill-level {
+            background-color: orange;
+        }
+        li:nth-child(3) .skill-level {
+            background-color: yellow;
+        }
+        li:nth-child(4) .skill-level {
+            background-color: green;
+        }
+        li:nth-child(5) .skill-level {
+            background-color: blue;
+        }
+        li:nth-child(6) .skill-level {
+            background-color: purple;
+        }
+        li:nth-child(7) .skill-level {
+            background-color: pink;
+        }
+        li:nth-child(8) .skill-level {
+            background-color: black;
+        }
+          
         .skill-container { 
             transition: all 0.3s ease-in-out;
             &:hover {
@@ -49,11 +76,6 @@ main {
                 color: var(--font-color);
             }
         }
-    }
-
-    .skills-section {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
 
     .skills {
