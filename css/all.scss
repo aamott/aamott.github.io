@@ -7,6 +7,11 @@
     --color-secondary: hsl(0, 0%, 98%);
     --color-tertiary: hsl(197, 78%, 49%);
     --font-color: hsl(0, 0%, 96%);
+    // background
+    --background-color: hsl(0, 0%, 50%);
+    --background-gray: hsl(0, 0%, 50%, 0.5);
+    --background-green: hsla(124, 46%, 51%, 0.5);
+    --background-gradient: linear-gradient(119deg, var(--background-gray) 54%, var(--background-green) 81%);
 
     // Fonts
     --font-primary: 'Roboto Flex', Arial, sans-serif;
@@ -134,8 +139,8 @@ main {
     // keep the footer at the bottom of the page and fill the rest of the page
     min-height: calc(100vh - var(--nav-height) - var(--footer-height));
 
-    background: rgb(128, 128, 128);
-    background: linear-gradient(119deg, hsla(0, 0%, 50%, 0.5) 54%, hsla(124, 46%, 51%, 0.499) 81%);
+    background: var(--background-color);
+    background: var(--background-gradient);
     z-index: 0;
     padding: 30px;
     margin-bottom: 0;
