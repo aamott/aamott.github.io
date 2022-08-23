@@ -16,7 +16,7 @@ main {
         min-height: calc(100vh - var(--nav-height) - var(--footer-height));
         max-width: 600px;
         div {
-            margin-top: calc(100vh / 4);
+            margin-top: calc(100vw / 7);
             h1 {
                 font-size: 4.9em;
                 margin-top: 0;
@@ -84,6 +84,12 @@ main {
 
 @media screen and (min-width: 800px) {
     main {
+        #intro {
+            height: calc(100vh - var(--nav-height) - var(--footer-height));
+            div {
+                margin-top: calc(100vh / 4);
+            }
+        }
         .skills-section {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
