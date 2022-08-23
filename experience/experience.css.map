@@ -1,9 +1,1 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AACI,IADA,CACA,EAAE,AAAC,CACC,SAAS,CAAE,KAAK,CACnB,AAHL,AAII,IAJA,CAIA,EAAE,AAAC,CACC,SAAS,CAAE,GAAG,CACjB",
-    "sources": [
-        "experience.scss"
-    ],
-    "names": [],
-    "file": "experience.css"
-}
+{"version":3,"sources":["experience.scss"],"names":[],"mappings":"AACI,QACI,eAAA,CAEJ,QACI,aAAA","file":"experience.css"}
