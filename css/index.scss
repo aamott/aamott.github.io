@@ -13,7 +13,7 @@ main {
 
     #intro {
         display: flow-root; // keep intro from pushing content down further than necessary
-        height: calc(100vh - var(--nav-height) - var(--footer-height));
+        min-height: calc(100vh - var(--nav-height) - var(--footer-height));
         max-width: 600px;
         div {
             margin-top: calc(100vh / 4);
