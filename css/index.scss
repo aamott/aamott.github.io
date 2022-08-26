@@ -15,6 +15,13 @@ main {
         display: flow-root; // keep intro from pushing content down further than necessary
         min-height: calc(100vh - var(--nav-height) - var(--footer-height));
         max-width: 600px;
+
+        // header zoom animation
+        // h1{
+        //     transform: scale(0.94);
+        //     animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
+        // }
+
         div {
             margin-top: calc(100vw / 7);
             h1 {

@@ -12,7 +12,10 @@ main {
         border-radius: 20px;
         margin: 15px 0;
         padding: 20px;
-    }    
+    }
+    // .project-box:nth-child(1) {
+
+    // }
 }
 
 @media screen and (max-width: 799px) {
@@ -20,7 +23,7 @@ main {
 }
 
 @media screen and (min-width: 800px) {
-    .project-box {
-        border: 5px solid red;
+    main .project-box {
+        // border: 5px solid red;
     }
 }

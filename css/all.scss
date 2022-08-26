@@ -95,10 +95,6 @@ nav {
         gap: 10px;
         height: 100%;
 
-        a {
-            display: block;
-            padding: 2px;
-        }
         img {
             height: 100%;
             width: 100%;
@@ -149,9 +145,9 @@ main {
     overflow: hidden;
     
     // header zoom animation
-    h1, h2 {
+    h1 {
         transform: scale(0.94);
-        animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
+        animation: scale 1s forwards cubic-bezier(0.5, 1, 0.89, 1);
     }
 
     @keyframes scale {
