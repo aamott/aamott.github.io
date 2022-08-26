@@ -50,6 +50,26 @@ nav {
 
     border-bottom: 5px solid var(--color-primary);
 
+    .slide-animation:hover {
+        background-position: left;
+    }
+    .slide-animation {
+        // color slide animation
+        background: linear-gradient(to left, var(--font-color) 50%, purple 50%) right;
+        background-clip: text;
+        background-size: 200%;
+        transition: .5s ease-out;
+    }
+    .slide-animation-img:hover {
+        background-position: left;
+    }
+    .slide-animation-img {
+        // color slide animation
+        background: linear-gradient(to left, rgba(0, 0, 0, 0) 50%, var(--color-primary) 50%) right;
+        background-size: 200%;
+        transition: .5s ease-out;
+    }
+
     .name-box {
         display: flex;
         height: 100%;
@@ -58,11 +78,14 @@ nav {
         padding: 10px;
         padding-left: 30px;
 
+        a, a:link, a:visited, a:active {
+            text-decoration: none;
+        }
         h3 {
             font-size: 1.9rem;
             font-weight: bold;
-            color: var(--font-color);
             min-width: max-content;
+            color: var(--font-color);
         }
     }
 
@@ -72,10 +95,16 @@ nav {
         gap: 10px;
         height: 100%;
 
+        a {
+            display: block;
+            padding: 2px;
+        }
         img {
             height: 100%;
             width: 100%;
             min-width: 30px;
+            padding: 2px;
+            border-radius: 4px;
         }
     }
 
@@ -160,10 +189,13 @@ footer {
     nav {
         .hamburger-icon {
             position: absolute;
+            display: block;
             z-index: 1;
             top: 15px;
             right: 3vw;
+            cursor: pointer;
             span {
+                z-index: -1;
                 height: 5px;
                 width: 40px;
                 background-color: var(--color-secondary);
