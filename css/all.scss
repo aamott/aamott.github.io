@@ -191,16 +191,22 @@ footer {
             z-index: 1;
             top: 15px;
             right: 3vw;
-            cursor: pointer;
-            span {
-                z-index: -1;
-                height: 5px;
-                width: 40px;
-                background-color: var(--color-secondary);
-                display: block;
-                margin: 5px 0;
-                transition: 0.8s ease-in-out;
-                transform: none;
+            padding: 0;
+            height: max-content; 
+            #hamburger-label {
+                display: inline-block;
+                cursor: pointer;
+                // padding: 4px 0;
+                span {
+                    z-index: -1;
+                    height: 5px;
+                    width: 40px;
+                    background-color: var(--color-secondary);
+                    display: block;
+                    margin: 5px 0;
+                    transition: 0.8s ease-in-out;
+                    transform: none;
+                }
             }
         }
         input.hamburger-checkbox {
