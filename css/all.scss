@@ -214,16 +214,18 @@ footer {
         }
         #openmenu:checked ~ ul#nav-menu {
             // right: 0;
-            transform: translateX(0);
+            transform: translateX(0); // slide menu into view
         }
+        // form an x when menu open
         #openmenu:checked ~ .hamburger-icon span:first-child {
-            transform: translate(0%, 175%) rotate(-45deg);
+            transform: translate(0%, 190%) rotate(-45deg);
             background-color: black;
         }
         #openmenu:checked ~ .hamburger-icon span:last-child {
-            transform: rotate(45deg);
+            transform: translate(0%, -190%) rotate(45deg);
             background-color: black;
         }
+        // end form x
         #openmenu:checked ~ .hamburger-icon span:nth-child(2) {
             opacity: 0;
         }
