@@ -9,10 +9,9 @@
     --color-tertiary: hsl(197, 78%, 49%);
     --font-color: hsl(0, 0%, 96%);
     // background
-    --background-color: hsl(0, 0%, 50%);
-    --background-gray: hsl(0, 0%, 50%, 0.5);
+    --background-color: rgba(177, 177, 177, 0.5);
     --background-green: hsla(124, 46%, 51%, 0.5);
-    --background-gradient: linear-gradient(119deg, var(--background-gray) 54%, var(--background-green) 81%);
+    --background-gradient: linear-gradient(119deg, var(--background-color) 54%, var(--background-green) 81%);
 
     // Fonts
     --font-primary: 'Roboto Flex', Arial, sans-serif;
