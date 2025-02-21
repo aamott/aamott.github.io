@@ -9,6 +9,12 @@
             font-family: Arial, sans-serif;
             text-align: center;
             padding: 50px;
+            margin: 0;
+            overflow: hidden;
+            position: relative;
+            background-color: black;
+            color: green;
+            height: 100vh;
         }
         .message {
             font-size: 24px;
@@ -23,26 +29,77 @@
             color: red;
             margin-top: 20px;
         }
+        .popup {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+            display: none;
+            z-index: 10;
+        }
+        .popup.show {
+            display: block;
+        }
+        .matrix {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+        }
+        .matrix span {
+            position: absolute;
+            top: -100px;
+            left: 0;
+            font-size: 20px;
+            animation: fall 5s linear infinite;
+            opacity: 0;
+        }
+        @keyframes fall {
+            0% {
+                top: -100px;
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                top: 100vh;
+                opacity: 0;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="message">This page has been blocked.</div>
     <div class="additional-message">You might have been hacked. Please report this incident to your most knowledgeable computer person.</div>
-    <audio id="screamAudio" src="scream.mp3" preload="auto" loop></audio>
+    <audio id="screamAudio" src="scream.mp3" preload="auto" loop>
         Your browser does not support the audio element.
     </audio>
     <div id="errorMessage" class="error-message" style="display: none;">
         There was an issue playing the audio file. Please check your browser settings or permissions.
     </div>
+    <img src="pop.jpg" alt="Pop" class="popup" id="popupImage" style="display: none;">
+    <div class="matrix" id="matrix"></div>
 
     <script>
+        let hasInteracted = false;
+
         document.addEventListener("click", function() {
             playAudio();
+            setTimeout(showPopup, 1000); // 1-second delay
+            startMatrixEffect();
             document.removeEventListener("click", arguments.callee);
         });
 
         document.addEventListener("keydown", function() {
             playAudio();
+            setTimeout(showPopup, 1000); // 1-second delay
+            startMatrixEffect();
             document.removeEventListener("keydown", arguments.callee);
         });
 
@@ -55,6 +112,51 @@
                 console.error("Error attempting to play audio:", error);
             });
         }
+
+        function showPopup() {
+            var popupImage = document.getElementById("popupImage");
+            popupImage.classList.add("show");
+            setTimeout(function() {
+                popupImage.classList.remove("show");
+            }, 2000); // Show the popup for 2 seconds
+        }
+
+        function startMatrixEffect() {
+            var matrix = document.getElementById("matrix");
+            var chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+";
+            var matrixSize = 100;
+
+            for (var i = 0; i < matrixSize; i++) {
+                var span = document.createElement("span");
+                span.innerText = chars.charAt(Math.floor(Math.random() * chars.length));
+                span.style.left = Math.random() * 100 + "vw";
+                span.style.top = Math.random() * 100 + "vh";
+                span.style.animationDelay = Math.random() * 5 + "s";
+                matrix.appendChild(span);
+            }
+        }
+
+        function getRandomDelay() {
+            // Return a random delay between 1 and 4 seconds
+            return Math.floor(Math.random() * 5000) + 1000;
+        }
+
+        function showImage() {
+            if (!hasInteracted) return;
+            document.getElementById('popupImage').style.display = 'block';
+            setTimeout(function() {
+                document.getElementById('popupImage').style.display = 'none';
+                setTimeout(showImage, getRandomDelay());
+            }, 200);
+        }
+
+        document.addEventListener('click', function() {
+            if (!hasInteracted) {
+                hasInteracted = true;
+                // Initial delay of 1 second
+                setTimeout(showImage, 400);
+            }
+        });
     </script>
 </body>
 </html>
