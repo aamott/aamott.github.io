@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blocked Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+        .message {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .additional-message {
+            font-size: 18px;
+            color: red;
+        }
+        .error-message {
+            font-size: 18px;
+            color: red;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="message">This page has been blocked.</div>
+    <div class="additional-message">You might have been hacked. Please report this incident to your most knowledgeable computer person.</div>
+    <audio id="screamAudio" src="scream.mp3" preload="auto" loop></audio>
+        Your browser does not support the audio element.
+    </audio>
+    <div id="errorMessage" class="error-message" style="display: none;">
+        There was an issue playing the audio file. Please check your browser settings or permissions.
+    </div>
+
+    <script>
+        document.addEventListener("click", function() {
+            playAudio();
+            document.removeEventListener("click", arguments.callee);
+        });
+
+        document.addEventListener("keydown", function() {
+            playAudio();
+            document.removeEventListener("keydown", arguments.callee);
+        });
+
+        function playAudio() {
+            var audio = document.getElementById("screamAudio");
+            var errorMessage = document.getElementById("errorMessage");
+
+            audio.play().catch(function(error) {
+                errorMessage.style.display = "block";
+                console.error("Error attempting to play audio:", error);
+            });
+        }
+    </script>
+</body>
+</html>
