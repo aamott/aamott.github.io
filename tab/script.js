@@ -3,6 +3,9 @@ const links = [
     // { url: 'https://www.coolmath4kids.com', description: 'Cool Math Games' },
     { url: 'https://www.nationalgeographic.com/kids', description: 'National Geographic Kids' },
     { url: 'https://www.funbrain.com', description: 'Funbrain Games' },
+    { url: 'https://www.youtube.com/c/TheEfficientEngineer/videos', description: 'The Efficient Engineer - YouTube' },
+    // { url: 'https://www.youtube.com/c/TheEfficientEngineer/videos', description: 'The Efficient Engineer - YouTube' },
+
     // Add more links as needed
 ];
 
